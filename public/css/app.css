@@ -1,0 +1,325 @@
+/********************************
+* Html Global                   *
+********************************/
+
+/*** Elements ***/
+*{
+  font-family: Lato;
+}
+body{
+  margin: 0;
+  margin-top: 100px;
+  background-color: #EFF8F7;
+}
+@media(min-width:768px){
+  body{
+    margin-top: 50px;
+  }
+}
+
+/********************************
+* Containers                    *
+********************************/
+
+/*** Admin Layout ***/
+#wrapper {
+  padding-left: 0;
+}
+#page-wrapper {
+  width: 100%;
+  padding: 0;
+  padding: 10px;
+}
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 160px;
+  }
+}
+.page-title{
+  font-size: 25px;
+  color: #AFB8B9;
+  padding: 10px 20px;
+}
+.page-title i{
+  margin-right: 10px;
+}
+
+/********************************
+* Panels                        *
+********************************/
+
+/*** Default Panel ***/
+.panel-default{
+  border-color: #BDE9EB;
+  background-color: #fff;
+}
+.panel-default .chart{
+  height: 250px;
+}
+.panel-default .chart-title{
+  color: #4dbac9;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.panel-default .top-chart{
+  height: 350px;
+}
+.panel-default .top-chart .morris-hover{
+  display: none !important;
+}
+.panel-default #top-players-table, 
+.panel-default #top-courses-table{
+  margin-top: 20px;
+}
+.panel-default .top-players-photo{
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-border-radius: 20px;
+  -khtml-border-radius: 20px;
+}
+
+/********************************
+* Charts                        *
+********************************/
+.morris-hover{
+  position:absolute;
+  z-index:1000
+}
+.morris-hover.morris-default-style{
+  border-radius:10px;
+  padding:6px;
+  color:#666;
+  background:rgba(255,255,255,0.8);
+  border:solid 2px rgba(230,230,230,0.8);
+  font-size:12px;
+  text-align:center
+}
+.morris-hover.morris-default-style .morris-hover-row-label{
+  font-weight:bold;
+  margin:0.25em 0
+}
+.morris-hover.morris-default-style .morris-hover-point{
+  white-space:nowrap;
+  margin:0.1em 0
+}
+
+
+/********************************
+* Navbars                       *
+********************************/
+
+/*** Top Navigation ***/
+.navbar{
+  background-color: #173241;
+}
+.navbar-brand{
+  background-color: #f60;
+  color: #fff;
+}
+#user-profile a{
+  height: 50px !important;
+  padding-top: 2px !important;
+}
+#user-profile ul li a{
+  height: auto !important;
+}
+#user-profile ul li a:hover{
+  background-color: #f60;
+  color: #fff;
+}
+@media (min-width: 768px){
+  .navbar{
+    height: 50px !important;
+  }
+  .navbar-header{
+    height: 50px !important;
+  }
+  .navbar-brand{
+    width: 160px;
+  }
+}
+@media (max-width: 767px){
+  .navbar-header{
+    background-color: #f60;
+  }
+  .navbar-header .icon-bar{
+    background-color: #fff;
+  }
+  .top-nav{
+    padding: 0px !important;
+  }
+  #user-profile{
+    float: right;
+  }
+}
+.photo-profile{
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  -moz-border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -o-border-radius: 23px;
+  -khtml-border-radius: 23px;
+}
+.top-nav {
+  padding: 0 15px;
+}
+.top-nav>li {
+  display: inline-block;
+  float: left;
+}
+.top-nav>li>a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+  color: #999;
+}
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+  color: #fff;
+  background-color: #f60;
+}
+.top-nav>.open>.dropdown-menu {
+  float: left;
+  position: absolute;
+  margin-top: 0;
+  border: 1px solid rgba(0,0,0,.15);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.top-nav>.open>.dropdown-menu>li>a {
+  white-space: normal;
+}
+ul.alert-dropdown {
+  width: 200px;
+}
+
+/*** Sidebar ***/
+.side-nav{
+  background-color: #1E475D;
+  overflow: hidden !important;
+}
+.side-nav>li>a{
+  color: #4dbac9;
+  border-bottom: inset 2px #1C4258;
+  border-top: outset 2px #224B64;
+}
+.side-nav li a:hover,
+.side-nav li a:focus {
+  outline: none;
+  background-color: #173241 !important;
+}
+.side-nav li.active{
+  background-color: #173241 !important;
+  border-left: solid 5px #f60;
+}
+.side-nav>li.active>a{
+  border-top: 0px;
+  border-bottom: 0px;
+  color: #fff;
+}
+@media(min-width:768px) {
+  .side-nav {
+    position: fixed;
+    top: 51px;
+    left: 160px;
+    width: 160px;
+    margin-left: -160px;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+  .side-nav>li>a {
+    width: 160px;
+    text-align: center;
+  }
+  .side-nav>li>a>i{
+    display: block;
+    font-size: 24px;
+  }
+  .side-nav>li>a>span{
+    display: block;
+  }
+}
+.side-nav>li>ul {
+  padding: 0;
+}
+.side-nav>li>ul>li>a {
+  display: block;
+  padding: 10px 15px 10px 38px;
+  text-decoration: none;
+  color: #999;
+}
+.side-nav>li>ul>li>a:hover {
+  color: #fff;
+}
+
+/********************************
+* Form Controls                 *
+********************************/
+
+/*** Forms ***/
+#login-form{
+  margin-top: 100px;
+}
+@media all and (max-width: 768px){
+  #login-form{
+    margin-top: 0px;
+  }
+}
+/*** Inputs ***/
+.form-control{
+  border-color: #eee;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  background: transparent;
+  border-bottom: solid 3px #f60;
+}
+.input-group-addon{
+  border-color: #eee;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -khtml-border-radius: 0px;
+  background: transparent;
+  border-bottom: solid 3px #f60;
+}
+
+/*** Buttons ***/
+.btn{
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -o-border-radius: 0px;
+  -khtml-border-radius: 0px;
+}
+.btn-primary{
+  background: #f60;
+  color: #fff;
+  border-color: #d25400;
+}
+.btn-primary:hover{
+  background: #d25400;
+  border-color: #d25400;
+}
+.btn-login{
+  margin-right: 20px;
+}
