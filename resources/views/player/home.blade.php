@@ -1,6 +1,9 @@
 @extends('admin\layout')
 
 @section('content')
+<!--<?php
+	print_r($user);
+?>!-->
 <div class="container-fluid">
 	<div class="row">
 		<div class="page-title">

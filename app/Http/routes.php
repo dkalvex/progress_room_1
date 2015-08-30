@@ -11,6 +11,13 @@
 |
 */
 
+/*Route::get('/', [
+	'uses' => 'App\Http\Controllers\HomeController@index',
+	'as' => NULL,
+	'middleware' => ['loginSession'],
+	'where' => [],
+	'domain' => NULL,
+])*/;
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 Route::get('destroy', 'SessionController@destroySession');
