@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers\Sessiones;
+<?php namespace App\Http\Controllers\Session;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

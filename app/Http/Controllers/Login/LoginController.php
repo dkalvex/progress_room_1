@@ -68,7 +68,7 @@ class LoginController extends Controller
 			array_push($errors,"El campo email es obligatorio");
 			$view = "Auth/login";
 		}
-		return View($view)->with('errors',$errors);
+		//return View($view)->with('errors',$errors);
 	}
 
 }
