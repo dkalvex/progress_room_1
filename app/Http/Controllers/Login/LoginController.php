@@ -5,13 +5,13 @@ use App\Http\Controllers\Controller;
 use DB;
 use App\Http\Controllers\Sessiones\SessionController;
 
-class LoguinController extends Controller
+class LoginController extends Controller
 {
 	public function __construct($value='')
 	{
 		//$this->middleware('session');
 	}
-	public function loguin(Request $request)
+	public function login(Request $request)
 	{
 		$view = "/";
 		$errors = array();
