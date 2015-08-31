@@ -6,7 +6,7 @@ use DB;
 
 class SessionController extends Controller
 {
-	public function actualizarUsuarioPerfil(Request $request)
+	public function updateUserProfile(Request $request)
 	{
 		$user_role = $request->session()->get('user.role_id');
 		$status = true;
@@ -35,7 +35,7 @@ class SessionController extends Controller
 		return $status;
 	}
 
-	public function actualizarUsuarioUsuario(Request $request)
+	public function updateUserData(Request $request)
 	{
 		$user_id = $request->session()->get('user.id');
 		$user = DB::select("SELECT * FROM user WHERE  id = :id ",['id'=>$user_id]);

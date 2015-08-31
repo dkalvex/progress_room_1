@@ -1,4 +1,4 @@
-@extends('admin\layout')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container-fluid">
@@ -11,7 +11,7 @@
 		<div class="col-xs-12">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="chart-title">Jugadores Activos Última Semana</div>
+					<div class="chart-title">Actividad Semanal de los Jugadores</div>
 					<div class="chart" id="daily-players"></div>
 				</div>
 			</div>

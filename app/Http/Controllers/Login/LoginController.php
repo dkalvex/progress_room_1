@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
-use App\Http\Controllers\Sessiones\SessionController;
+use App\Http\Controllers\Session\SessionController;
 
 class LoginController extends Controller
 {
@@ -34,23 +34,23 @@ class LoginController extends Controller
 							
 							$session = new SessionController;
 							
-							$session->actualizarUsuarioUsuario($request);
-							$session->actualizarUsuarioPerfil($request);
+							$session->updateUserData($request);
+							$session->updateUserProfile($request);
 
 							//se valida el rol del usaurio
 							if($request->session()->get('user.role_id') == '3'){
-								$view="player/home";
+								$view = "home/home";
 							}else{
-								$view="admin/home";
+								$view = "home/dashboard";
 							}
 							return view($view)->with('user',$request->session()->get('user'));
 						}
 					}else{
-						array_push($errors,"Email ó Password incorrectos");
+						array_push($errors,"Email ó Contraseña incorrectos");
 						$view = "Auth/login";
 					}			
 				}else{
-					array_push($errors,"Email ó Password incorrectos");
+					array_push($errors,"Email ó Contraseña incorrectos");
 					$view = "Auth/login";
 				}				
 			}
@@ -60,7 +60,7 @@ class LoginController extends Controller
 		//Errores
 		if ($password == null and $password == "")
 		{
-			array_push($errors,"El campo password es obligatorio");
+			array_push($errors,"El campo contraseña es obligatorio");
 			$view = "Auth/login";
 		}
 		if ($email == null and $email == "")

@@ -49,7 +49,6 @@
 					</a>
 					<ul class="dropdown-menu">
 						<li><a href="{{ url('/admin/profile') }}"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
-						<li><a href="{{ url('/admin/settings') }}"><i class="glyphicon glyphicon-cog"></i> Configuración</a></li>
 						<li class="divider"></li>
 						<li><a href="{{ url('/destroy') }}"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
 					</ul>
@@ -65,12 +64,6 @@
 					</li>
 					<li>
 						<a href="{{ url('/') }}">
-							<i class="fa fa-users"></i>
-							<span class="sidebar-link">Jugadores</span>
-						</a>
-					</li>
-					<li>
-						<a href="{{ url('/') }}">
 							<i class="fa fa-bullseye"></i>
 							<span class="sidebar-link">Misiones</span>
 						</a>
@@ -79,12 +72,6 @@
 						<a href="{{ url('/') }}">
 							<i class="fa fa-calendar"></i>
 							<span class="sidebar-link">Eventos</span>
-						</a>
-					</li>
-					<li>
-						<a href="{{ url('/') }}">
-							<i class="fa fa-trophy"></i>
-							<span class="sidebar-link">Ligas</span>
 						</a>
 					</li>
 					<li>
@@ -109,7 +96,6 @@
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<script src="{{ asset('../resources/assets/js/adminCharts.js') }}"></script>
 	@yield('scripts')
 </body>
 </html>

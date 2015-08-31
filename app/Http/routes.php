@@ -20,7 +20,6 @@
 ])*/;
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
-Route::get('destroy', 'SessionController@destroySession');
 Route::post('login', 'login\LoginController@login');
 
 Route::controllers([
