@@ -10,7 +10,7 @@ class SessionController extends Controller
 	{
 		$user_role = $request->session()->get('user.role_id');
 		$status = true;
-		if ($user_role=null || $user_role = ""){
+		if ($user_role==null || $user_role == ""){
 			$status = false;
 		}else{
 			$rol = array();
@@ -21,10 +21,10 @@ class SessionController extends Controller
 									
 				//Obtener Información del Perfil
 				$profile = array();
-				$profile =  DB::table('user_profile')->where('user_id',$user{0}->id)->get();
+				$profile =  DB::table('user_profile')->where('user_id',$request->session()->get('user.id'))->get();
 									
 				//Se guarda en la session
-				if($profile!=null){
+				if(count($profile)>0){
 					$request->session()->put('user.photo',$profile{0}->photo);
 					$request->session()->put('user.actual_points',$profile{0}->actual_points);
 					$request->session()->put('user.redeemable_points',$profile{0}->redeemable_points);

@@ -36,7 +36,6 @@ class LoginController extends Controller
 							
 							$session->updateUserData($request);
 							$session->updateUserProfile($request);
-
 							//se valida el rol del usaurio
 							if($request->session()->get('user.role_id') == '3'){
 								$view = "home/home";
@@ -68,7 +67,7 @@ class LoginController extends Controller
 			array_push($errors,"El campo email es obligatorio");
 			$view = "Auth/login";
 		}
-		//return View($view)->with('errors',$errors);
+		return View($view)->with('errors',$errors);
 	}
 
 }
