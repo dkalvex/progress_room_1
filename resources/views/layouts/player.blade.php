@@ -50,7 +50,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="{{ url('/admin/profile') }}"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
 						<li class="divider"></li>
-						<li><a href="{{ url('/destroy') }}"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
+						<li><a href="{{ url('/logaout') }}"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
 					</ul>
 				</li>
 			</ul>

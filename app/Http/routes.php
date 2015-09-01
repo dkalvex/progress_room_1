@@ -20,8 +20,10 @@
 ])*/;
 Route::get('/', 'HomeController@index');
 Route::get('home', 'HomeController@index');
-Route::post('login', 'login\LoginController@login');
+Route::get('logaout', 'Session\SessionController@loagout');
 
+
+Route::post('login', 'login\LoginController@login');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
