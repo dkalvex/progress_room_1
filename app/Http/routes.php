@@ -15,19 +15,14 @@ Route::group(['middleware' => 'login'],function()
 {
 	Route::get('/', 'HomeController@index');
 	Route::get('home', 'HomeController@index');
-	//Route::get('auth/login', '');
 });
 
 Route::group(['middleware' => 'logout'],function()
 {
-	Route::get('home/dashboard','Home\HomeController@index');
+	Route::get('home/dashboard','Home\DashboardController@index');
 	Route::get('home/home', 'Home\HomeController@index');
-	Route::get('logaout', 'Session\SessionController@loagout');
+	Route::get('logout', 'Session\SessionController@logout');
 });
 
 
 Route::post('login', 'login\LoginController@login');
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);

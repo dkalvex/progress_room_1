@@ -57,7 +57,7 @@ class SessionController extends Controller
 		}
 		return $status;
 	}
-	public function loagout(Request $request)
+	public function logout(Request $request)
 	{
 		$request->session()->flush();
 		return redirect("home");
