@@ -7,7 +7,7 @@ class Logout{
 	public function handle($request, Closure $next)
 	{
 		$user_id = $request->session()->get('user.id');
-		echo $user_id;
+		
         if ($user_id==null and $user_id=="")
         {
             return redirect('/');

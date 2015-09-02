@@ -43,18 +43,18 @@
 				</li>
 				<li class="dropdown" id="user-profile">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-						<img src="../resources/assets/img/users/{{ Session::get('user.photo') }}" class="photo-profile">						
+						<img src="../../resources/assets/img/users/{{ $user['photo'] }}" class="photo-profile">						
 						{{ $user['first_name'] }} {{ $user['last_name'] }}
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="{{ url('/admin/profile') }}"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
+						<li><a href="{{ url('/profile') }}"><i class="glyphicon glyphicon-user"></i> Perfil</a></li>
 						<li class="divider"></li>
 						<li><a href="{{ url('/logout') }}"><i class="glyphicon glyphicon-off"></i> Cerrar Sesión</a></li>
 					</ul>
 				</li>
 			</ul>
-			<div class="collapse navbar-collapse sidebar">|
+			<div class="collapse navbar-collapse sidebar">
 				<ul class="nav navbar-nav side-nav">
 					<li class="active">
 						<a href="{{ url('/') }}">
@@ -72,6 +72,12 @@
 						<a href="{{ url('/') }}">
 							<i class="fa fa-calendar"></i>
 							<span class="sidebar-link">Eventos</span>
+						</a>
+					</li>
+					<li>
+						<a href="{{ url('/') }}">
+							<i class="fa fa-trophy"></i>
+							<span class="sidebar-link">Torneos</span>
 						</a>
 					</li>
 					<li>
