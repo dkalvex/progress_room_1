@@ -11,16 +11,19 @@
 |
 */
 
-/*Route::get('/', [
-	'uses' => 'App\Http\Controllers\HomeController@index',
-	'as' => NULL,
-	'middleware' => ['loginSession'],
-	'where' => [],
-	'domain' => NULL,
-])*/;
-Route::get('/', 'HomeController@index');
-Route::get('home', 'HomeController@index');
-Route::get('logaout', 'Session\SessionController@loagout');
+Route::group(['middleware' => 'login'],function()
+{
+	Route::get('/', 'HomeController@index');
+	Route::get('home', 'HomeController@index');
+	Route::get('auth/login', 'HomeController@index');
+});
+
+Route::group(['middleware' => 'logout'],function()
+{
+	Route::get('home/dashboard','Home\HomeController@index');
+	Route::get('home/home', 'Home\HomeController@index');
+	Route::get('logaout', 'Session\SessionController@loagout');
+});
 
 
 Route::post('login', 'login\LoginController@login');

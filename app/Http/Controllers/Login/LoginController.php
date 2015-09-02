@@ -42,7 +42,7 @@ class LoginController extends Controller
 							}else{
 								$view = "home/dashboard";
 							}
-							return view($view)->with('user',$request->session()->get('user'));
+							return redirect($view);
 						}
 					}else{
 						array_push($errors,"Email ó Contraseña incorrectos");
