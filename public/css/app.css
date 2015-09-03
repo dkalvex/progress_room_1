@@ -401,3 +401,14 @@ ul.alert-dropdown {
 .btn-login{
   margin-right: 20px;
 }
+
+/********************************
+* Tables                        *
+********************************/
+.pager{
+  text-align: left;
+}
+.btn-bar{
+  margin: 20px 0px;
+  text-align: right;
+}

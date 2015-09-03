@@ -11,6 +11,7 @@
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
 	<link href='//fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
+	<link href="http://mottie.github.io/tablesorter/css/theme.dropbox.css" rel="stylesheet" type="text/css" >
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +44,7 @@
 				</li>
 				<li class="dropdown" id="user-profile">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-						<img src="../../resources/assets/img/users/{{ $user['photo'] }}" class="photo-profile">						
+						<img src="{{ asset('../resources/assets/img/users') }}/{{ $user['photo'] }}" class="photo-profile">						
 						{{ $user['first_name'] }} {{ $user['last_name'] }}
 						<b class="caret"></b>
 					</a>
