@@ -24,6 +24,9 @@ Route::group(['middleware' => 'logout'],function()
 	Route::get('logout', 'Session\SessionController@logout');
 	Route::get('home/dashboard/users', 'Users\AllController@index');
 });
-
-
 Route::post('login', 'login\LoginController@login');
+
+Route::controllers([
+	'auth' => 'Login\LoginController',	
+]);
+
