@@ -64,7 +64,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="{{ url('/') }}">
+						<a href="{{ url('home/dashboard/users') }}">
 							<i class="fa fa-users"></i>
 							<span class="sidebar-link">Jugadores</span>
 						</a>
