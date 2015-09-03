@@ -22,6 +22,7 @@ Route::group(['middleware' => 'logout'],function()
 	Route::get('home/dashboard','Home\DashboardController@index');
 	Route::get('home/home', 'Home\HomeController@index');
 	Route::get('logout', 'Session\SessionController@logout');
+	Route::get('home/dashboard/users', 'Users\AllController@index');
 });
 
 
