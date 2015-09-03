@@ -101,38 +101,15 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-8">
-						<input class="search selectable form-control" type="search" placeholder="Buscar" data-column="all">
-					</div>
-					<div class="col-xs-2">
-				        <select class="change-input form-control">
-				        	<option value="all">Todo</option>
-				        	<option value="2">Nombre</option>
-				        	<option value="3">Apellido</option>
-				        	<option value="4">Rol</option>
-				        	<option value="5">Email</option>
-				        </select>
-				    </div>
-				    <div class="col-xs-2">
-				        <button class="btn btn-default reset">Limpiar</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
 			<table class="table table-striped tablesorter">
 				<thead>
 					<tr>
-						<th>Id</th>
+						<th class="filter-false">Id</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
-						<th>Rol</th>
+						<th class="filter-select">Rol</th>
 						<th>Email</th>
-						<th>Activo</th>
+						<th class="filter-select">Activo</th>
 						<th>Equipo</th>
 						<th>Nivel</th>
 					</tr>
