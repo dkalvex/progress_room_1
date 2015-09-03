@@ -89,33 +89,102 @@ body{
 
 /*** Dashboard charts ***/
 .morris-hover{
-  position:absolute;
-  z-index:1000
+  position: absolute;
+  z-index: 1000;
 }
 .morris-hover.morris-default-style{
-  border-radius:10px;
-  padding:6px;
-  color:#666;
-  background:rgba(255,255,255,0.8);
-  border:solid 2px rgba(230,230,230,0.8);
-  font-size:12px;
-  text-align:center
+  border-radius: 10px;
+  padding: 6px;
+  color: #666;
+  background: rgba(255,255,255,0.8);
+  border: solid 2px rgba(230,230,230,0.8);
+  font-size: 12px;
+  text-align: center;
 }
 .morris-hover.morris-default-style .morris-hover-row-label{
-  font-weight:bold;
-  margin:0.25em 0
+  font-weight: bold;
+  margin: 0.25em 0;
 }
 .morris-hover.morris-default-style .morris-hover-point{
-  white-space:nowrap;
-  margin:0.1em 0
+  white-space: nowrap;
+  margin: 0.1em 0;
 }
 
 /*** Stats ***/
 .stat{
-
+  color: #fff;
+  padding: 10px;
+  overflow: auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  margin-bottom: 5px;
+}
+.title-stat{
+  font-size: 12px;
+}
+.total-stat{
+  font-size: 28px;
+}
+.chart-stat{
+  height: 50px;
+  width: 100%;
+}
+.footer-stat{
+  text-align: center;
+  margin-top: 5px;
+}
+.footer-stat a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 3px;
+  display: block;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
 }
 .green-stat{
   background: #4CC3A5;
+}
+.green-stat .footer-stat a{
+  background: #3ea58a;
+}
+.green-stat .footer-stat a:hover{
+  background: #fff;
+  color: #3ea58a;
+}
+.orange-stat{
+  background: #f60;
+}
+.orange-stat .footer-stat a{
+  background: #db5700;
+}
+.orange-stat .footer-stat a:hover{
+  background: #fff;
+  color: #db5700;
+}
+.blue-stat{
+  background: #4DA1CF;
+}
+.blue-stat .footer-stat a{
+  background: #448db5;
+}
+.blue-stat .footer-stat a:hover{
+  background: #fff;
+  color: #448db5;
+}
+.purple-stat{
+  background: #A883B9;
+}
+.purple-stat .footer-stat a{
+  background: #9273a0;
+}
+.purple-stat .footer-stat a:hover{
+  background: #fff;
+  color: #9273a0;
 }
 
 /********************************

@@ -11,7 +11,7 @@
 		<div class="col-xs-12">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="chart-title">Actividad Semanal de los Jugadores</div>
+					<div class="chart-title">Total accesos únicos</div>
 					<div class="chart" id="daily-players"></div>
 				</div>
 			</div>
@@ -21,7 +21,7 @@
 		<div class="col-xs-12 col-md-4">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="chart-title">Jugadores Activos</div>
+					<div class="chart-title">Jugadores en Línea</div>
 					<div class="chart" id="active-players"></div>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 		<div class="col-xs-12 col-md-4">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="chart-title">Cursos con Jugadores Activos</div>
+					<div class="chart-title">Cursos con Jugadores en Línea</div>
 					<div class="chart" id="active-courses"></div>
 				</div>
 			</div>
@@ -37,7 +37,7 @@
 		<div class="col-xs-12 col-md-4">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<div class="chart-title">Misiones con Jugadores Activos</div>
+					<div class="chart-title">Misiones con Jugadores en Línea</div>
 					<div class="chart" id="active-missions"></div>
 				</div>
 			</div>
@@ -72,4 +72,7 @@
 		</div>
 	</div>
 </div>
+@endsection
+@section('scripts')
+<script src="{{ asset('../resources/assets/js/adminCharts.js') }}"></script>
 @endsection
