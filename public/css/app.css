@@ -368,7 +368,7 @@ ul.alert-dropdown {
   -o-border-radius: 0px;
   -khtml-border-radius: 0px;
   background: transparent;
-  border-bottom: solid 3px #f60;
+  border-bottom: solid 3px #f60 !important;
 }
 .input-group-addon{
   border-color: #eee;
@@ -379,6 +379,14 @@ ul.alert-dropdown {
   -khtml-border-radius: 0px;
   background: transparent;
   border-bottom: solid 3px #f60;
+}
+.filter-control{
+  background: #fff;
+  width: 90px;
+  display: inline;
+}
+.filter-control option{
+  color: #666;
 }
 
 /*** Buttons ***/
@@ -411,4 +419,7 @@ ul.alert-dropdown {
 .btn-bar{
   margin: 20px 0px;
   text-align: right;
+}
+.tablesorter-filter-row .disabled{
+  display: none;
 }

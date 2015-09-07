@@ -71,13 +71,12 @@ $(function(){
           columns_tfoot: true,
           columns_thead: true,
           filter_childRows: false,
-          filter_columnFilters: false,
-          filter_saveFilters: true,
+          filter_columnFilters: true,
           filter_cssFilter: "tablesorter-filter",
           filter_functions: null,
           filter_hideFilters: false,
           filter_ignoreCase: true,
-          filter_reset: '.reset',
+          filter_reset: null,
           filter_searchDelay: 300,
           filter_serversideFiltering: false,
           filter_startsWith: false,
@@ -143,9 +142,6 @@ $(function(){
       odd: 'ui-state-default' // odd row zebra striping
   });
 
-  $.tablesorter.filter.bindSearch( $('table'), $('.search'));
-  $('select').change(function(){
-  	$('.selectable').attr('data-column', $(this).val());
-  	$.tablesorter.filter.bindSearch($('table'), $('.search'), false);
-  });
+  $('.pagesize, .gotoPage').addClass('form-control filter-control');
+  $('.tablesorter-filter').addClass('form-control filter-control').css({'min-width': '100px'});
 })

@@ -101,6 +101,7 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
+<<<<<<< HEAD
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="col-xs-8">
@@ -124,15 +125,17 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
+=======
+>>>>>>> origin/master
 			<table class="table table-striped tablesorter">
 				<thead>
 					<tr>
-						<th>Id</th>
+						<th class="filter-false">Id</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
-						<th>Rol</th>
+						<th class="filter-select">Rol</th>
 						<th>Email</th>
-						<th>Activo</th>
+						<th class="filter-select">Activo</th>
 						<th>Equipo</th>
 						<th>Nivel</th>
 					</tr>
