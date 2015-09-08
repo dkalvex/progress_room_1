@@ -146,13 +146,14 @@
 				<tbody>
 					<?php
 						$usAll = json_decode(json_encode($userAll));
+						//print_r($usAll);
 						for ($i=0; $i < count($usAll) ; $i++) { 
 							echo "<tr>";
 								echo "<td><input type='checkbox' class='user-check' id='".$usAll{$i}->id."'></td>";
 								echo "<td>".$usAll{$i}->id."</td>";
 								echo "<td>".$usAll{$i}->first_name."</td>";
 								echo "<td>".$usAll{$i}->last_name."</td>";
-								echo "<td>".$usAll{$i}->role_id."</td>";
+								echo "<td>".$usAll{$i}->rol."</td>";
 								echo "<td>".$usAll{$i}->email."</td>";
 								echo "<td>".$usAll{$i}->active."</td>";
 								echo "<td>".$usAll{$i}->team_id."</td>";
