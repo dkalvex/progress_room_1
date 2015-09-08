@@ -27,6 +27,6 @@ Route::group(['middleware' => 'logout'],function()
 Route::post('login', 'login\LoginController@login');
 
 Route::controllers([
-	'auth' => 'Login\LoginController',	
+	'Loguin' => 'Login\LoginController',	
 ]);
 
