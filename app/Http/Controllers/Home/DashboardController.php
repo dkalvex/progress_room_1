@@ -8,7 +8,7 @@ class DashboardController extends Controller
 {
 	public function index(Request $request)
 	{
-		return view('home/dashboard')->with('user',$request->session()->get('user'));
+		return view('home/dashboard');
 	}
 
 }

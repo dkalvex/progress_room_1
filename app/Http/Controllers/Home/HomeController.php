@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
 	public function index(Request $request)
 	{
-		return view('home/home')->with('user',$request->session()->get('user'));
+		return view('home/home');
 	}
 
 }

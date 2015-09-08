@@ -9,7 +9,7 @@ class AllController extends Controller
 	public function index(Request $request)
 	{
 		$userAll = $this->listarTodos();
-		return view("users/all",['userAll'=>$userAll,'user'=> $request->session()->get('user')]);
+		return view("users/all",['userAll'=>$userAll]);
 	}
 	public function listarTodos()
 	{

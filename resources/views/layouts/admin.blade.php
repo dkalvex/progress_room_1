@@ -44,8 +44,8 @@
 				</li>
 				<li class="dropdown" id="user-profile">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-						<img src="{{ asset('../resources/assets/img/users') }}/{{ $user['photo'] }}" class="photo-profile">						
-						{{ $user['first_name'] }} {{ $user['last_name'] }}
+						<img src="{{ asset('../resources/assets/img/users') }}/{{ \Session::get('user.photo') }}" class="photo-profile">						
+						{{ \Session::get('user.first_name') }} {{ \Session::get('user.last_name') }}
 						<b class="caret"></b>
 					</a>
 					<ul class="dropdown-menu">
