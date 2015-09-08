@@ -1,5 +1,5 @@
 var topColors = ['#3C9787', '#CA7B5F', '#8964A2', '#CA595D', '#246F9A'];
-var path = '../resources/assets/img/users/';
+var path = '../../resources/assets/img/users/';
 
 $(function(){
   $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js',function(){
@@ -84,11 +84,11 @@ $(function(){
 function showPlayersTable(){
   for(var i=0; i<5; i++){
     var row = document.createElement('div');
-    row.className = 'row';
+    row.className = 'row top-row';
     row.style.paddingBottom = '10px';
 
     var img = document.createElement('img');
-    img.src = path + 'default.jpg';
+    img.src = path + 'default.png';
     img.className = 'col-xs-4 top-players-photo';
     img.style.border = 'solid 3px ' + topColors[i];
 
@@ -117,11 +117,11 @@ function showPlayersTable(){
 function showCoursesTable(){
   for(var i=0; i<5; i++){
     var row = document.createElement('div');
-    row.className = 'row';
+    row.className = 'row top-row';
     row.style.paddingBottom = '10px';
 
     var img = document.createElement('img');
-    img.src = path + 'default.jpg';
+    img.src = path + 'default.png';
     img.className = 'col-xs-4 top-players-photo';
     img.style.border = 'solid 3px ' + topColors[i];
 

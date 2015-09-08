@@ -43,7 +43,7 @@
 				</li>
 				<li class="dropdown" id="user-profile">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-						<img src="../../resources/assets/img/users/{{ $user['photo'] }}" class="photo-profile">						
+						<img src="{{ asset('../resources/assets/img/users') }}/{{ $user['photo'] }}" class="photo-profile">						
 						{{ $user['first_name'] }} {{ $user['last_name'] }}
 						<b class="caret"></b>
 					</a>
@@ -56,6 +56,18 @@
 			</ul>
 			<div class="collapse navbar-collapse sidebar">
 				<ul class="nav navbar-nav side-nav">
+					<li class="sidebar-progress">
+						<div class="col-xs-6">
+							<img src="{{ asset('../resources/assets/img/leagues/') }}/level-{{ $user['level_id'] }}.png" class="img img-responsive">
+						</div>
+						<div class="col-xs-6">
+							<h4>Novato</h4>
+							<span>4{{ $user['actual_points'] }} ptos</span>
+							<div class="progress">
+								<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="4{{ $user['actual_points'] }}" aria-valuemin="0" aria-valuemax="100" style="width: 4{{ $user['actual_points'] }}%"></div>
+							</div>
+						</div>
+					</li>
 					<li class="active">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-home"></i>
@@ -64,7 +76,7 @@
 					</li>
 					<li>
 						<a href="{{ url('/') }}">
-							<i class="fa fa-bullseye"></i>
+							<i class="fa fa-rocket"></i>
 							<span class="sidebar-link">Misiones</span>
 						</a>
 					</li>

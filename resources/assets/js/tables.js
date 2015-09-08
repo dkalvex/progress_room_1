@@ -144,4 +144,13 @@ $(function(){
 
   $('.pagesize, .gotoPage').addClass('form-control filter-control');
   $('.tablesorter-filter').addClass('form-control filter-control').css({'min-width': '100px'});
+  $('.tablesorter-filter-row').addClass('hide-filter');
+
+  $('#btn-filter').on('click', function(){
+    if($('.tablesorter-filter-row').hasClass('hide-filter')){
+      $('.tablesorter-filter-row').addClass('show-filter').removeClass('hide-filter');
+    }else{
+      $('.tablesorter-filter-row').addClass('hide-filter').removeClass('show-filter');
+    }
+  });
 })

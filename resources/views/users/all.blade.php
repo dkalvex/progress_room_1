@@ -93,9 +93,11 @@
 		</div>
 		<div class="col-xs-12 col-md-6">
 	    	<div class="btn-bar">
-	    		<button class="btn btn-default"><i class="fa fa-refresh"></i> Activar/Inactivar</button>
-	    		<button class="btn btn-info"><i class="fa fa-upload"></i> Importar</button>
-				<button class="btn btn-primary"><i class="fa fa-plus"></i> Agregar</button>
+	    		<button class="btn btn-default" id="btn-filter"><i class="fa fa-filter"></i> Filtrar</button>
+	    		<button class="btn btn-default"><i class="fa fa-eye"></i> Activar</button>
+	    		<button class="btn btn-default"><i class="fa fa-eye-slash"></i> Inactivar</button>
+	    		<button class="btn btn-info"><i class="fa fa-upload"></i></button>
+				<button class="btn btn-primary"><i class="fa fa-plus"></i></button>
 			</div>
 		</div>
 	</div>
@@ -130,6 +132,7 @@
 			<table class="table table-striped tablesorter">
 				<thead>
 					<tr>
+						<th class="filter-false"></th>
 						<th class="filter-false">Id</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
@@ -145,6 +148,7 @@
 						$usAll = json_decode(json_encode($userAll));
 						for ($i=0; $i < count($usAll) ; $i++) { 
 							echo "<tr>";
+								echo "<td><input type='checkbox' class='user-check' id='".$usAll{$i}->id."'></td>";
 								echo "<td>".$usAll{$i}->id."</td>";
 								echo "<td>".$usAll{$i}->first_name."</td>";
 								echo "<td>".$usAll{$i}->last_name."</td>";

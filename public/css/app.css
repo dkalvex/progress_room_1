@@ -32,7 +32,7 @@ body{
 }
 @media(min-width:768px) {
   #wrapper {
-    padding-left: 160px;
+    padding-left: 220px;
   }
 }
 .page-title{
@@ -81,6 +81,37 @@ body{
   -webkit-border-radius: 20px;
   -o-border-radius: 20px;
   -khtml-border-radius: 20px;
+}
+
+/********************************
+* Lists                         *
+********************************/
+
+/*** Panel List ***/
+.list-group-item{
+  overflow: auto;
+}
+.mission-title{
+  font-size: 14px;
+}
+.mission-desc{
+  font-size: 11px;
+}
+.mission-progress{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid 1px #bbb;
+}
+.mission-progress .progress{
+  height: 10px;
+}
+.mission-progress .progress-bar-default{
+  background: #f60;
+}
+.mission-percent{
+  color: #f60;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 /********************************
@@ -218,7 +249,7 @@ body{
     height: 50px !important;
   }
   .navbar-brand{
-    width: 160px;
+    width: 220px;
   }
 }
 @media (max-width: 767px){
@@ -311,9 +342,9 @@ ul.alert-dropdown {
   .side-nav {
     position: fixed;
     top: 51px;
-    left: 160px;
-    width: 160px;
-    margin-left: -160px;
+    left: 220px;
+    width: 220px;
+    margin-left: -220px;
     border: none;
     border-radius: 0;
     overflow-y: auto;
@@ -322,7 +353,7 @@ ul.alert-dropdown {
     padding-bottom: 40px;
   }
   .side-nav>li>a {
-    width: 160px;
+    width: 220px;
     text-align: center;
   }
   .side-nav>li>a>i{
@@ -344,6 +375,34 @@ ul.alert-dropdown {
 }
 .side-nav>li>ul>li>a:hover {
   color: #fff;
+}
+.sidebar-progress{
+  color: #fff;
+  width: 100%;
+  padding: 10px 0px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+.sidebar-progress img{
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto;
+}
+.sidebar-progress span{
+  font-size: 12px;
+}
+.sidebar-progress .progress{
+  height: 10px;
+}
+.sidebar-progress .progress-bar-default{
+  background: #f60;
+}
+@media(max-width:768px) {
+  .sidebar-progress{
+    display: none !important;
+  }
 }
 
 /********************************
@@ -384,6 +443,12 @@ ul.alert-dropdown {
   background: #fff;
   width: 90px;
   display: inline;
+  border: solid 1px #ddd !important;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding: 3px;
 }
 .filter-control option{
   color: #666;
@@ -422,4 +487,28 @@ ul.alert-dropdown {
 }
 .tablesorter-filter-row .disabled{
   display: none;
+}
+.hide-filter{
+  display: none;
+}
+.show-filter{
+  display: table-row;
+}
+.top-row:first-child{
+  margin-top: 5px;
+  border-top: solid 1px #bbb;
+}
+.top-row{
+  padding: 5px 0px;
+  margin-right: 0px;
+  border-bottom: solid 1px #bbb;
+}
+.top-row .top-players-photo{
+  border: solid 3px #ddd;
+}
+.active-row .top-row-title{
+  color: #f60 !important;
+}
+.active-row .top-players-photo{
+  border: solid 3px #f60;
 }
