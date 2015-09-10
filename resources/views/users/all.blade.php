@@ -103,7 +103,6 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-<<<<<<< HEAD
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="col-xs-8">
@@ -127,8 +126,6 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-=======
->>>>>>> origin/master
 			<table class="table table-striped tablesorter">
 				<thead>
 					<tr>

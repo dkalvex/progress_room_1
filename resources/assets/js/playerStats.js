@@ -5,7 +5,7 @@ $(function(){
     grid: {show: false, borderWidth: 0, hoverable: true},
     series: {
       lines: {show: true, fill: true},
-      points: {show: true, radius: 3, fillColor: '#ffffff'}
+      points: {show: true, radius: 2, fillColor: '#ffffff'}
     }
   };
 
