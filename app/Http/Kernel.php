@@ -26,6 +26,8 @@ class Kernel extends HttpKernel {
 	 */
 	protected $routeMiddleware = [
 		'logout' => 'App\Http\Middleware\Logout',
+		'player' => 'App\Http\Middleware\Player',
+		'admin' => 'App\Http\Middleware\Admin',
 		'login' => 'App\Http\Middleware\Login',
 		'auth' => 'App\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',

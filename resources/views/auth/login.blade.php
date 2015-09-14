@@ -10,8 +10,9 @@
 				<div class="form-group">
 					<h1>Iniciar Sesión</h1>
 					<h5>Usa tus credenciales para ingresar a la plataforma</h5>
-					<?php 
+					<?php 						
 						if(count($errors) > 0){
+
 							echo "<div class='alert alert-danger'>
 								<strong>Whoops!</strong> There were some problems with your input.<br><br>
 								<ul>";

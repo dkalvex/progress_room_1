@@ -97,7 +97,7 @@
 	    		<button class="btn btn-default"><i class="fa fa-eye"></i> Activar</button>
 	    		<button class="btn btn-default"><i class="fa fa-eye-slash"></i> Inactivar</button>
 	    		<button class="btn btn-info"><i class="fa fa-upload"></i></button>
-				<button class="btn btn-primary"><i class="fa fa-plus"></i></button>
+				<a class="btn btn-primary" href="{{ url('home/dashboard/users/createUser') }}"><i class="fa fa-plus"></i></a>
 			</div>
 		</div>
 	</div>

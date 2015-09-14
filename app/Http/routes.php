@@ -18,15 +18,23 @@ Route::group(['middleware' => 'login'],function()
 });
 
 Route::group(['middleware' => 'logout'],function()
+{	
+	Route::get('logout', 'Session\SessionController@logout');
+});
+
+Route::group(['middleware' => 'player'],function()
+{		
+	Route::get('home/home', 'Home\HomeController@index');
+});
+
+Route::group(['middleware' => 'admin'],function()
 {
 	Route::get('home/dashboard','Home\DashboardController@index');
-	Route::get('home/home', 'Home\HomeController@index');
-	Route::get('logout', 'Session\SessionController@logout');
 	Route::get('home/dashboard/users', 'Users\AllController@index');
 	Route::get('home/dashboard/users/createUser', 'Users\CreateUserController@index');
 });
-Route::post('login', 'login\LoginController@login');
 
+Route::post('login', 'login\LoginController@login');
 Route::controllers([
 	'Loguin' => 'Login\LoginController',	
 ]);
