@@ -58,13 +58,13 @@
 				<ul class="nav navbar-nav side-nav">
 					<li class="sidebar-progress">
 						<div class="col-xs-6">
-							<img src="{{ asset('../resources/assets/img/leagues/') }}/level-{{ $user['level_id'] }}.png" class="img img-responsive">
+							<img src="{{ asset('../resources/assets/img/leagues/') }}/level-{{ \Session::get('user.level_id') }}.png" class="img img-responsive">
 						</div>
 						<div class="col-xs-6">
 							<h4>Novato</h4>
 							<span>{{ \Session::get('user.actual_points') }} ptos</span>
 							<div class="progress">
-								<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="4{{ $user['actual_points'] }}" aria-valuemin="0" aria-valuemax="100" style="width: 4{{ $user['actual_points'] }}%"></div>
+								<div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="4{{ \Session::get('user.actual_points') }}" aria-valuemin="0" aria-valuemax="100" style="width: 4{{ \Session::get('user.actual_points') }}%"></div>
 							</div>
 						</div>
 					</li>

@@ -23,6 +23,7 @@ Route::group(['middleware' => 'logout'],function()
 	Route::get('home/home', 'Home\HomeController@index');
 	Route::get('logout', 'Session\SessionController@logout');
 	Route::get('home/dashboard/users', 'Users\AllController@index');
+	Route::get('home/dashboard/users/createUser', 'Users\CreateUserController@index');
 });
 Route::post('login', 'login\LoginController@login');
 
