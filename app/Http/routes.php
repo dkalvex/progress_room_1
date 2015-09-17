@@ -24,14 +24,15 @@ Route::group(['middleware' => 'logout'],function()
 
 Route::group(['middleware' => 'player'],function()
 {		
-	Route::get('home/home', 'Home\HomeController@index');
+	Route::get('home/index', 'Home\HomeController@index');
 });
 
 Route::group(['middleware' => 'admin'],function()
 {
 	Route::get('home/dashboard','Home\DashboardController@index');
-	Route::get('home/dashboard/users', 'Users\AllController@index');
-	Route::get('home/dashboard/users/createUser', 'Users\CreateUserController@index');
+	Route::get('users', 'Users\AllController@index');
+	Route::get('users/new', 'Users\NewController@index');
+	Route::get('events', 'Events\AllController@index');
 });
 
 Route::post('login', 'login\LoginController@login');

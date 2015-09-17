@@ -42,7 +42,7 @@ class LoginController extends Controller
 							$session->updateUserProfile($request);
 							//se valida el rol del usaurio
 							if($request->session()->get('user.role_id') == '3'){
-								$view = "home/home";
+								$view = "home/index";
 							}else{
 								$view = "home/dashboard";
 							}

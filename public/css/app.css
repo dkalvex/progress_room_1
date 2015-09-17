@@ -39,6 +39,8 @@ body{
   font-size: 25px;
   color: #AFB8B9;
   padding: 10px 20px;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 10px;
 }
 .page-title i{
   margin-right: 10px;
@@ -421,13 +423,26 @@ ul.alert-dropdown {
 #login-form{
   margin-top: 100px;
 }
+.panel-form{
+  margin-top: 20px;
+}
 @media all and (max-width: 768px){
   #login-form{
     margin-top: 0px;
   }
 }
+
+/*** Labels ***/
+.panel-form label{
+  color: #666;
+}
+/*** Images ***/
+.img-center{
+  margin: 0 auto;
+}
+
 /*** Inputs ***/
-.form-control{
+.login-control{
   border-color: #eee;
   border-radius: 0px;
   -moz-border-radius: 0px;
@@ -449,7 +464,7 @@ ul.alert-dropdown {
 }
 .filter-control{
   background: #fff;
-  width: 90px;
+  width: 50px;
   display: inline;
   border: solid 1px #ddd !important;
   border-radius: 5px;
@@ -484,11 +499,11 @@ ul.alert-dropdown {
 
 /*** Buttons ***/
 .btn{
-  border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -o-border-radius: 0px;
-  -khtml-border-radius: 0px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -khtml-border-radius: 5px;
 }
 .btn-primary{
   background: #f60;
@@ -501,6 +516,16 @@ ul.alert-dropdown {
 }
 .btn-login{
   margin-right: 20px;
+}
+.btn-half{
+  width: 50% !important;
+}
+.btn-full{
+  width: 100% !important;
+}
+#action-dropdown{
+  right: 0 !important;
+  left: auto;
 }
 
 /********************************
@@ -539,6 +564,9 @@ ul.alert-dropdown {
 }
 .active-row .top-players-photo{
   border: solid 3px #f60;
+}
+.tablesorter-dropbox{
+  border-top: 0px !important;
 }
 
 /********************************

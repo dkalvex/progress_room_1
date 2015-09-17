@@ -93,73 +93,59 @@
 		</div>
 		<div class="col-xs-12 col-md-6">
 	    	<div class="btn-bar">
-	    		<button class="btn btn-default" id="btn-filter"><i class="fa fa-filter"></i> Filtrar</button>
-	    		<button class="btn btn-default"><i class="fa fa-eye"></i> Activar</button>
-	    		<button class="btn btn-default"><i class="fa fa-eye-slash"></i> Inactivar</button>
+	    		<button class="btn btn-default" id="btn-filter"><i class="fa fa-filter"></i></button>
+	    		<div class="btn-group">
+	    			<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    				<i class="fa fa-bars"></i><span class="caret" style="margin-left: 5px;"></span>
+	    			</button>
+	    			<ul class="dropdown-menu" id="action-dropdown">
+	    				<li><a href="#">Activar</a></li>
+	    				<li><a href="#">Inactivar</a></li>
+	    			</ul>
+	    		</div>
 	    		<button class="btn btn-info"><i class="fa fa-upload"></i></button>
-				<a class="btn btn-primary" href="{{ url('home/dashboard/users/createUser') }}"><i class="fa fa-plus"></i></a>
+				<a class="btn btn-primary" href="{{ url('users/new') }}"><i class="fa fa-plus"></i></a>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-8">
-						<input class="search selectable form-control" type="search" placeholder="Buscar" data-column="all">
-					</div>
-					<div class="col-xs-2">
-				        <select class="change-input form-control">
-				        	<option value="all">Todo</option>
-				        	<option value="2">Nombre</option>
-				        	<option value="3">Apellido</option>
-				        	<option value="4">Rol</option>
-				        	<option value="5">Email</option>
-				        </select>
-				    </div>
-				    <div class="col-xs-2">
-				        <button class="btn btn-default reset">Limpiar</button>
-					</div>
-				</div>
+				<table class="table table-striped tablesorter">
+					<thead>
+						<tr>
+							<th class="filter-false"></th>
+							<th class="filter-false">Id</th>
+							<th>Nombre</th>
+							<th>Apellido</th>
+							<th class="filter-select">Rol</th>
+							<th>Email</th>
+							<th class="filter-select">Activo</th>
+							<th>Equipo</th>
+							<th>Nivel</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php
+							$usAll = json_decode(json_encode($userAll));
+							//print_r($usAll);
+							for ($i=0; $i < count($usAll) ; $i++) { 
+								echo "<tr>";
+									echo "<td><input type='checkbox' class='user-check' id='".$usAll{$i}->id."'></td>";
+									echo "<td>".$usAll{$i}->id."</td>";
+									echo "<td>".$usAll{$i}->first_name."</td>";
+									echo "<td>".$usAll{$i}->last_name."</td>";
+									echo "<td>".$usAll{$i}->rol."</td>";
+									echo "<td>".$usAll{$i}->email."</td>";
+									echo "<td>".$usAll{$i}->active."</td>";
+									echo "<td>".$usAll{$i}->team_id."</td>";
+									echo "<td>".$usAll{$i}->level_id."</td>";
+								echo "</tr>";
+							}
+						?>
+					</tbody>
+				</table>
 			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<table class="table table-striped tablesorter">
-				<thead>
-					<tr>
-						<th class="filter-false"></th>
-						<th class="filter-false">Id</th>
-						<th>Nombre</th>
-						<th>Apellido</th>
-						<th class="filter-select">Rol</th>
-						<th>Email</th>
-						<th class="filter-select">Activo</th>
-						<th>Equipo</th>
-						<th>Nivel</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php
-						$usAll = json_decode(json_encode($userAll));
-						//print_r($usAll);
-						for ($i=0; $i < count($usAll) ; $i++) { 
-							echo "<tr>";
-								echo "<td><input type='checkbox' class='user-check' id='".$usAll{$i}->id."'></td>";
-								echo "<td>".$usAll{$i}->id."</td>";
-								echo "<td>".$usAll{$i}->first_name."</td>";
-								echo "<td>".$usAll{$i}->last_name."</td>";
-								echo "<td>".$usAll{$i}->rol."</td>";
-								echo "<td>".$usAll{$i}->email."</td>";
-								echo "<td>".$usAll{$i}->active."</td>";
-								echo "<td>".$usAll{$i}->team_id."</td>";
-								echo "<td>".$usAll{$i}->level_id."</td>";
-							echo "</tr>";
-						}
-					?>
-				</tbody>
-			</table>
 		</div>
 	</div>
 </div>
@@ -171,4 +157,7 @@
 <script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.js"></script>
 <script src="http://mottie.github.io/tablesorter/addons/pager/jquery.tablesorter.pager.js"></script>
 <script src="{{ asset('../resources/assets/js/tables.js') }}"></script>
+<script>
+	$("#li-players").addClass("active");
+</script>
 @endsection

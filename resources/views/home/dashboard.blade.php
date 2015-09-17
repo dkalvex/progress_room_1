@@ -75,4 +75,7 @@
 @endsection
 @section('scripts')
 <script src="{{ asset('../resources/assets/js/adminCharts.js') }}"></script>
+<script>
+	$("#li-home").addClass("active");
+</script>
 @endsection

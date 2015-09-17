@@ -58,43 +58,43 @@
 			</ul>
 			<div class="collapse navbar-collapse sidebar">
 				<ul class="nav navbar-nav side-nav">
-					<li class="active">
+					<li id="li-home">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-home"></i>
 							<span class="sidebar-link">Inicio</span>
 						</a>
 					</li>
-					<li>
-						<a href="{{ url('home/dashboard/users') }}">
+					<li id="li-players">
+						<a href="{{ url('users') }}">
 							<i class="fa fa-users"></i>
 							<span class="sidebar-link">Jugadores</span>
 						</a>
 					</li>
-					<li>
+					<li id="li-missions">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-rocket"></i>
 							<span class="sidebar-link">Misiones</span>
 						</a>
 					</li>
-					<li>
-						<a href="{{ url('/') }}">
+					<li id="li-events">
+						<a href="{{ url('events') }}">
 							<i class="fa fa-calendar"></i>
 							<span class="sidebar-link">Eventos</span>
 						</a>
 					</li>
-					<li>
+					<li id="li-tournaments">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-trophy"></i>
 							<span class="sidebar-link">Torneos</span>
 						</a>
 					</li>
-					<li>
+					<li id="li-courses">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-graduation-cap"></i>
 							<span class="sidebar-link">Cursos</span>
 						</a>
 					</li>
-					<li>
+					<li id="li-opportunities">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-institution"></i>
 							<span class="sidebar-link">Oportunidades</span>
