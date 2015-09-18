@@ -11,7 +11,7 @@ class Login{
         if ($user_id!=null and $user_id!="")
         {
 			if($request->session()->get('user.role_id') == '3'){
-				$view = "home/home";
+				$view = "home/index";
 			}else{
 				$view = "home/dashboard";
 			}

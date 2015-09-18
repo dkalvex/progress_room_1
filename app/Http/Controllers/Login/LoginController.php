@@ -9,8 +9,8 @@ class LoginController extends Controller
 {
 	protected $users;
 	public function __construct($value='')
-	{
-		//$this->middleware('session');
+	{		
+
 	}
 	public function user(Request $request){
 		$this->users = $request->session()->get('user.id');

@@ -10,7 +10,7 @@ class Admin{
         if ($user_rol != null and $user_rol !="")
         {
 			if($user_rol == '3'){
-				return redirect("home/home");
+				return redirect("home/index");
 			}            
         }else{
         	$request->session()->flush();        	

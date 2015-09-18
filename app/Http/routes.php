@@ -32,6 +32,7 @@ Route::group(['middleware' => 'admin'],function()
 	Route::get('home/dashboard','Home\DashboardController@index');
 	Route::get('users', 'Users\AllController@index');
 	Route::get('users/new', 'Users\NewController@index');
+	Route::post('users/newSave', 'Users\NewController@saveUser');
 	Route::get('events', 'Events\AllController@index');
 });
 
