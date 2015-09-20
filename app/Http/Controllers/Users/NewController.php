@@ -18,9 +18,17 @@ class NewController extends Controller
 		$role = $request->input('role');
 		$team = $request->input('team');
 		$active = $request->input('active');
+		$userName = $request->input('userName');
 
-		echo $email." ".$first_name." ".$last_name." ".$role." ".$team." ".$active;
-		//echo "Estamos en save";
+		$user_id = DB::table('user')->insertGetId(
+						['first_name' => $first_name ,'email' => $email ,'role_id' => $role ,'last_name' => $last_name,'team_id' => $team,'active' => $active]
+					);		
+
+		DB::table('user_profile')->insert([
+			['username' => $userName ,'photo' => 'default.png' ,'user_id' => $user_id ]
+		]);
+		
+		return redirect('users/new');
 	}
 
 }

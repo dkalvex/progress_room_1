@@ -29,6 +29,10 @@
 									<input type="text" class="form-control" name="last_name" id="last_name" required>
 								</div>
 								<div class="form-group">
+									<label for="email">Nomre de usuario</label>
+									<input type="text" class="form-control" name="userName" id="userName" required>
+								</div>
+								<div class="form-group">
 									<label for="role">Rol</label>
 									<select class="form-control" name="role" id="role">
 										<option value="3" selected>Jugador</option>
