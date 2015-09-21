@@ -27,7 +27,7 @@ $(function(){
   $.plot($('#new-stat'), data_news, line_options);
 
   var points = [[1, 850], [2, 1200], [3, 260], [4, 550], [5, 1200], [6, 2100], [7, 1850], [8, 1900], [9, 2010], [10, 1750]];
-  var data_points = [{data: points, color: '#db5700'}];
+  var data_points = [{data: points, color: '#c63b50'}];
   $.plot($('#points-stat'), data_points, line_options);
 
   var redemptions = [[1, 2], [2, 7], [3, 4], [4, 4], [5, 2], [6, 7], [7, 6], [8, 10], [9, 2], [10, 6]];

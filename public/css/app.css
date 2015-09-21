@@ -113,10 +113,10 @@ body{
   margin-top: 8px;
 }
 .mission-progress .progress-bar-default{
-  background: #f60;
+  background: #ef4f69;
 }
 .mission-percent{
-  color: #f60;
+  color: #ef4f69;
   font-weight: bold;
   font-size: 16px;
 }
@@ -195,14 +195,14 @@ body{
   color: #3ea58a;
 }
 .orange-stat{
-  background: #f60;
+  background: #ef4f69;
 }
 .orange-stat .footer-stat a{
-  background: #db5700;
+  background: #c63b50;
 }
 .orange-stat .footer-stat a:hover{
   background: #fff;
-  color: #db5700;
+  color: #c63b50;
 }
 .blue-stat{
   background: #4DA1CF;
@@ -237,7 +237,7 @@ body{
   background-color: #173241;
 }
 .navbar-brand{
-  background-color: #f60;
+  background-color: #ef4f69;
   color: #fff;
 }
 #user-profile a{
@@ -248,7 +248,7 @@ body{
   height: auto !important;
 }
 #user-profile ul li a:hover{
-  background-color: #f60;
+  background-color: #ef4f69;
   color: #fff;
 }
 @media (min-width: 768px){
@@ -264,7 +264,7 @@ body{
 }
 @media (max-width: 767px){
   .navbar-header{
-    background-color: #f60;
+    background-color: #ef4f69;
   }
   .navbar-header .icon-bar{
     background-color: #fff;
@@ -304,7 +304,7 @@ body{
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
   color: #fff;
-  background-color: #f60;
+  background-color: #ef4f69;
 }
 .top-nav>.open>.dropdown-menu {
   float: left;
@@ -341,7 +341,7 @@ ul.alert-dropdown {
 }
 .side-nav li.active{
   background-color: #173241 !important;
-  border-left: solid 5px #f60;
+  border-left: solid 5px #ef4f69;
 }
 .side-nav>li.active>a{
   border-top: 0px;
@@ -407,7 +407,7 @@ ul.alert-dropdown {
   height: 10px;
 }
 .sidebar-progress .progress-bar-default{
-  background: #f60;
+  background: #ef4f69;
 }
 @media(max-width:768px) {
   .sidebar-progress{
@@ -450,7 +450,7 @@ ul.alert-dropdown {
   -o-border-radius: 0px;
   -khtml-border-radius: 0px;
   background: transparent;
-  border-bottom: solid 3px #f60 !important;
+  border-bottom: solid 3px #ef4f69 !important;
 }
 .input-group-addon{
   border-color: #eee;
@@ -460,7 +460,7 @@ ul.alert-dropdown {
   -o-border-radius: 0px;
   -khtml-border-radius: 0px;
   background: transparent;
-  border-bottom: solid 3px #f60;
+  border-bottom: solid 3px #ef4f69;
 }
 .filter-control{
   background: #fff;
@@ -506,13 +506,13 @@ ul.alert-dropdown {
   -khtml-border-radius: 5px;
 }
 .btn-primary{
-  background: #f60;
+  background: #ef4f69;
   color: #fff;
-  border-color: #d25400;
+  border-color: #c63b50;
 }
 .btn-primary:hover{
-  background: #d25400;
-  border-color: #d25400;
+  background: #c63b50;
+  border-color: #c63b50;
 }
 .btn-login{
   margin-right: 20px;
@@ -560,10 +560,10 @@ ul.alert-dropdown {
   border: solid 3px #ddd;
 }
 .active-row .top-row-title{
-  color: #f60 !important;
+  color: #ef4f69 !important;
 }
 .active-row .top-players-photo{
-  border: solid 3px #f60;
+  border: solid 3px #ef4f69;
 }
 .tablesorter-dropbox{
   border-top: 0px !important;

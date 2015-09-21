@@ -7,24 +7,26 @@
 
 <div class="container-fluid">
 	<div class="row">
+		<div class="page-title">
+			<i class="fa fa-calendar"></i> Eventos
+		</div>
+	</div>
+	<div class="row">
 		<div class="col-xs-12">
 			<div class="custom-calendar-wrap">
-				<div id="custom-inner" class="custom-inner">
-					<div class="custom-header clearfix">
+				<div class="custom-header clearfix">
+					<h3 class="custom-month-year">
+						<span id="custom-month" class="custom-month">Septiembre</span>
+						<span id="custom-year" class="custom-year">2015</span>
 						<nav>
+							<span id="custom-new" class="custom-new"></span>
 							<span id="custom-prev" class="custom-prev"></span>
 							<span id="custom-next" class="custom-next"></span>
+							<span id="custom-current" class="custom-current" title="Hoy"></span>
 						</nav>
-						<h2 id="custom-month" class="custom-month">September</h2>
-						<h3 id="custom-year" class="custom-year">2015</h3>
-					</div>
-					<div id="calendar" class="fc-calendar-container"></div>
+					</h3>
 				</div>
-			</div>
-			<div id="custom-content-reveal" class="custom-content-reveal" style="top: 0%;">
-				<h4>Events for September 12, 2012</h4>
-				<a href="http://tympanus.net/codrops/2012/09/12/creative-web-typography-styles/">Creative Web Typography Styles</a>
-				<span class="custom-content-close"></span>
+				<div id="calendar" class="fc-calendar-container"></div>
 			</div>
 		</div>
 	</div>

@@ -1,4 +1,4 @@
-var topColors = ['#ddd', '#ddd', '#f60', '#ddd', '#ddd'];
+var topColors = ['#ddd', '#ddd', '#3f4f69', '#ddd', '#ddd'];
 var path = '../../resources/assets/img/users/';
 
 $(function(){

@@ -19,7 +19,7 @@ $(function(){
         xkey: 'day',
         ykeys: ['value'],
         labels: ['Jugadores'],
-        lineColors: ['#f60'],
+        lineColors: ['#ef4f69'],
         parseTime: false
       });
       

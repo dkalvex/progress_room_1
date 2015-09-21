@@ -34,10 +34,10 @@
 			...
 		}
 		*/
-		weeks : [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
-		weekabbrs : [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
-		months : [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
-		monthabbrs : [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+		weeks : [ 'Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado' ],
+		weekabbrs : [ 'Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab' ],
+		months : [ 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre' ],
+		monthabbrs : [ 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic' ],
 		// choose between values in options.weeks or options.weekabbrs
 		displayWeekAbbr : false,
 		// choose between values in options.months or options.monthabbrs
@@ -100,7 +100,7 @@
 				case 5 : rowClass = 'fc-five-rows'; break;
 				case 6 : rowClass = 'fc-six-rows'; break;
 			}
-
+			
 			this.$cal = $( '<div class="fc-calendar ' + rowClass + '">' ).append( head, body );
 
 			this.$el.find( 'div.fc-calendar' ).remove().end().append( this.$cal );
