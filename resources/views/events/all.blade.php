@@ -19,10 +19,24 @@
 						<span id="custom-month" class="custom-month">Septiembre</span>
 						<span id="custom-year" class="custom-year">2015</span>
 						<nav>
-							<span id="custom-new" class="custom-new"></span>
+							<!--span id="custom-new" class="custom-new"></span>
 							<span id="custom-prev" class="custom-prev"></span>
 							<span id="custom-next" class="custom-next"></span>
-							<span id="custom-current" class="custom-current" title="Hoy"></span>
+							<span id="custom-current" class="custom-current" title="Hoy"></span-->
+							<div class="btn-group" role="group">
+								<button class="btn btn-default" id="custom-prev">
+									<i class="fa fa-chevron-left"></i>
+								</button>
+								<button class="btn btn-default" id="custom-next">
+									<i class="fa fa-chevron-right"></i>
+								</button>
+							</div>
+							<button class="btn btn-info" id="custom-current" title="Hoy">
+								<i class="fa fa-map-marker"></i>
+							</button>
+							<button class="btn btn-primary">
+								<i class="fa fa-plus"></i>
+							</button>
 						</nav>
 					</h3>
 				</div>
