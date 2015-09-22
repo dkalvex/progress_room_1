@@ -12,23 +12,20 @@ class NewController extends Controller
 	}
 	public function saveUser(Request $request)
 	{
-		$email = $request->input('email');
-		$first_name = $request->input('first_name');
-		$last_name = $request->input('last_name');
-		$role = $request->input('role');
-		$team = $request->input('team');
-		$active = $request->input('active');
-		$userName = $request->input('userName');
-
-		$user_id = DB::table('user')->insertGetId(
-						['first_name' => $first_name ,'email' => $email ,'role_id' => $role ,'last_name' => $last_name,'team_id' => $team,'active' => $active]
-					);		
-
-		DB::table('user_profile')->insert([
-			['username' => $userName ,'photo' => 'default.png' ,'user_id' => $user_id ]
-		]);
-		
-		return redirect('users/new');
+		$error = array();
+		$message = array();
+		try{
+			$user = $request->all();	
+			$psd = str_random(6);		
+			$status = \userFacade::saveUser($user,$psd);
+			\mailFacade::sendEmailPsd($user,$psd);
+			array_push($message,"El usuario fue guardado exitosamente");
+			return view('users/new')->with('message',$message);
+		}catch(Exception $e){
+			array_push($error,"Ha ocurrido al tratar de guardar el usaurio");
+			echo 'Error en guardar usuario',  $e->getMessage(), "\n";
+			return redirect('users/new')->with('errors',$error);
+		}		
 	}
 
 }

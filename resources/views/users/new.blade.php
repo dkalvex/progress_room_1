@@ -11,6 +11,25 @@
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<div class="row">
 			<div class="col-xs-12">
+				@if(isset($errors) and count($errors) > 0)
+				<div class='alert alert-warning'>
+					@foreach ($errors as $error)						
+					<ul>;
+						<li> {{ $error }} </li>
+					</ul>
+					@endforeach
+				</div>
+				@endif
+
+				@if(isset($message) and count($message) > 0)
+				<div class='alert alert-success'>
+					@foreach ($message as $messag)						
+					<ul>
+						<li> {{ $messag }} </li>
+					</ul>
+					@endforeach
+				</div>
+				@endif
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<div class="chart-title">Información General</div>

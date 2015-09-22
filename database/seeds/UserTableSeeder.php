@@ -7,7 +7,7 @@ class UserTableSeeder extends Seeder
 
 	public function run()
 	{
-		\DB::table('user')->insert(array(
+		\DB::table('users')->insert(array(
 			'first_name' => 'Eydi',
 			'last_name' => 'Ramirez',
 			'email' => 'eydiramirez@gmail.com',

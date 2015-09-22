@@ -3,6 +3,9 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
+use App\User as User;
+use App\User_rol as User_rol;
+use App\User_profile as User_profile;
 
 class SessionController extends Controller
 {
@@ -14,7 +17,7 @@ class SessionController extends Controller
 			$status = false;
 		}else{
 			$rol = array();
-			$rol =  DB::table('user_role')->where('id', '=',$user_role)->get();
+			$rol =  DB::table('user_role')->where('id', '=',$user_role)->get();			
 			if (count($rol)>0){
 				//Se guarda en session
 				$request->session()->put('user.rol_name',$rol{0}->name);
@@ -37,8 +40,11 @@ class SessionController extends Controller
 
 	public function updateUserData(Request $request)
 	{
-		$user_id = $request->session()->get('user.id');
-		$user = DB::select("SELECT * FROM user WHERE  id = :id ",['id'=>$user_id]);
+		//$user_id = $request->session()->get('user.id');
+		$user = new User;
+		$user->id = $request->session()->get('user.id');
+		$users = array();
+		$users = User::getById($user->id);
 
 		//Si se consiguen datos del usuario se guardan en session
 		if (count($user)>0){

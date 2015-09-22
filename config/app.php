@@ -194,7 +194,8 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
 		'userFacade'=> 'App\Http\Facades\userFacade',
-
+		'mailFacade'=> 'App\Http\Facades\mailFacade',
+		'logFacade' => 'App\Http\Facades\logFacade',
 	],
 
 ];

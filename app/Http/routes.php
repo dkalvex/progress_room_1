@@ -38,6 +38,8 @@ Route::group(['middleware' => 'admin'],function()
 
 Route::post('login', 'login\LoginController@login');
 Route::controllers([
-	'Loguin' => 'Login\LoginController',	
+	'auth' => 'Auth\AuthController',
+	'password' => 'Auth\PasswordController',
 ]);
+
 
