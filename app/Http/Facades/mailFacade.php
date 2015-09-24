@@ -7,7 +7,7 @@ class mailFacade extends Facade{
 	{
 		\Mail::send('emails.welcome',['user' => $user,'psd' => $psd], function ($message) use ($user) {
 			$message->from('dkalvex@gmial.com', 'Proggess_rom');
-			$message->to($user['email'])->subject('your password');
+			$message->to($user->email)->subject('your password');
 		});
 	}
 }

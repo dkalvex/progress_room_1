@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
+use App\User as User;
 
 class NewController extends Controller
 {
@@ -15,10 +16,8 @@ class NewController extends Controller
 		$error = array();
 		$message = array();
 		try{
-			$user = $request->all();	
-			$psd = str_random(6);		
-			$status = \userFacade::saveUser($user,$psd);
-			\mailFacade::sendEmailPsd($user,$psd);
+			$psd = str_random(6);
+			$status = \userFacade::saveUser($request,$psd);			
 			array_push($message,"El usuario fue guardado exitosamente");
 			return view('users/new')->with('message',$message);
 		}catch(Exception $e){

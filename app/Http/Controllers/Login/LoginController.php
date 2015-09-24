@@ -7,28 +7,39 @@ use DB;
 use App\User as User;
 
 class LoginController extends Controller{
-	public function __construct()
-	{
-		//$this->middleware('auth');
-	}
 	public function login(Request $request)
 	{
 		$view = "/";
-		$errors = array();
-		$user = new User;
-		$user->email = 	$request->input('email');
-		$user->password = $request->input('password');
-		$user->remember_token = $request->input('_token');
-		echo $user->email." ".$user->password;
-		if (\Auth::attempt(['email' => $user->email, 'password' => $user->password ,'active' => 1]))
+		$errors = array();		
+		$email = 	$request->input('email');
+		$password = $request->input('password');	
+		if (\Auth::attempt(['email' => $email, 'password' => $password ,'active' => 1]))
 		{
 			$request->session()->put('user.id',\Auth::user()->id);
-			$session = new SessionController;			
-			$session->updateUserData($request);
-			$session->updateUserProfile($request);	
+
+			\sessionFacade::updateUserData($request);
+			\sessionFacade::updateUserProfile($request);		
+
+			\logFacade::log('1',\Auth::user()->id);
+			return redirect($view);
 		}else{
 			array_push($errors,"Email ó Contraseña incorrectos");
-						$view = "Auth/login";
-		}	
+		}
+
+		//Errores
+		if ($password == null and $password == "")
+		{
+			array_push($errors,"El campo contraseña es obligatorio");
+		}
+		if ($email == null and $email == "")
+		{
+			array_push($errors,"El campo email es obligatorio");
+		}
+		return redirect($view)->with('errors',$errors);
+	}
+	public function logout(Request $request)
+	{
+		\sessionFacade::logout($request);
+		return redirect("home");
 	}			
 }

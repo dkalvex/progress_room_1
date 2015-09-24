@@ -19,7 +19,7 @@ Route::group(['middleware' => 'login'],function()
 
 Route::group(['middleware' => 'logout'],function()
 {	
-	Route::get('logout', 'Session\SessionController@logout');
+	Route::get('logout','login\LoginController@logout');
 });
 
 Route::group(['middleware' => 'player'],function()

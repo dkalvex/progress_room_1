@@ -196,6 +196,7 @@ return [
 		'userFacade'=> 'App\Http\Facades\userFacade',
 		'mailFacade'=> 'App\Http\Facades\mailFacade',
 		'logFacade' => 'App\Http\Facades\logFacade',
+		'sessionFacade' => 'App\Http\Facades\sessionFacade',
 	],
 
 ];

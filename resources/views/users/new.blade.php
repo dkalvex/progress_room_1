@@ -52,8 +52,8 @@
 									<input type="text" class="form-control" name="userName" id="userName" required>
 								</div>
 								<div class="form-group">
-									<label for="role">Rol</label>
-									<select class="form-control" name="role" id="role">
+									<label for="role_id">Rol</label>
+									<select class="form-control" name="role_id" id="role_id">
 										<option value="3" selected>Jugador</option>
 										<option value="2">Administrador</option>
 									</select>
@@ -72,8 +72,8 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="active">Equipo</label>
-									<select class="form-control" name="team" id="team">
+									<label for="team_id">Equipo</label>
+									<select class="form-control" name="team_id" id="team_id">
 										<option value="0" selected>Ninguno</option>
 									</select>
 								</div>

@@ -2,36 +2,36 @@
 
 use Illuminate\Support\Facades\Facade;
 use DB;
+use App\User as User;
+use App\User_profile as User_profile;
 class userFacade extends Facade{
 	public static function getAll()
 	{
 		$allUsers= array();
-		$allUsers = DB::table('user')
-		->select('user.id','first_name','last_name','user_role.name as rol','email','active','team_id','level_id' )
-		->join('user_role', 'user_role.id', '=', 'user.role_id')
-		->where('user.active','1')->get();
+		$allUsers = DB::table('users')
+		->select('users.id','first_name','last_name','user_rols.name as rol','email','active','team_id','level_id' )
+		->join('user_rols', 'user_rols.id', '=', 'users.role_id')
+		->where('users.active','1')->get();
 		return $allUsers;
 	}
-	public static function saveUser($user,$psd)
+	public static function saveUser($request,$psd)
 	{
-		$date = date('m/d/Y h:i:s a', time());
+		$user = new User;
+		$user->first_name = $request->input('first_name');
+		$user->last_name = $request->input('last_name');
+		$user->email = $request->input('email');
+		$user->active = $request->input('active');
+		$user->role_id = $request->input('role_id');
+		$user->team_id = $request->input('team_id');
+		$user->password = $psd;
+		$user->save();
 
-		$user_id = \DB::table('user')->insertGetId(array(
-			'first_name' => $user['first_name'] ,
-			'last_name' => $user['last_name'],
-			'email' => $user['email'],
-			'password' => \Hash::make($psd),
-			'role_id' => $user['role'],
-			'team_id' => $user['team'],
-			'active' => $user['active'],
-			'created_at' => $date
-			));
-
-		\DB::table('user_profile')->insert(array(
-			'username' => $user['userName'] ,
-			'photo' => 'default.png' ,
-			'user_id' => $user_id,
-			'created_at' => $date
-			));
+		$user_profile = new User_profile;
+		$user_profile->username = $request->input('userName');
+		$user_profile->photo = 'default.png';
+		$user_profile->user_id = $user->id;
+		$user_profile->save();
+		\mailFacade::sendEmailPsd($user,$psd);
+		\logFacade::log('50',$request->session()->get('user.id'));
 	}
 }
