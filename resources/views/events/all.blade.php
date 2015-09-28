@@ -19,10 +19,6 @@
 						<span id="custom-month" class="custom-month">Septiembre</span>
 						<span id="custom-year" class="custom-year">2015</span>
 						<nav>
-							<!--span id="custom-new" class="custom-new"></span>
-							<span id="custom-prev" class="custom-prev"></span>
-							<span id="custom-next" class="custom-next"></span>
-							<span id="custom-current" class="custom-current" title="Hoy"></span-->
 							<div class="btn-group" role="group">
 								<button class="btn btn-default" id="custom-prev">
 									<i class="fa fa-chevron-left"></i>

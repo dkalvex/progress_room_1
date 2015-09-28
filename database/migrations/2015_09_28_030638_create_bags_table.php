@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateBagsTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('bags', function(Blueprint $table)
+		{
+			$table->increments('id');
+
+			$table->integer('user_id')->nullable()->unsigned();
+			$table->integer('team_id')->nullable()->unsigned();
+			$table->integer('badge_id')->unsigned();
+			
+			$table->timestamps();
+		});
+	}
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('bags');
+	}
+
+}
