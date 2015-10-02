@@ -9,8 +9,8 @@ class userFacade extends Facade{
 	{
 		$allUsers= array();
 		$allUsers = DB::table('users')
-		->select('users.id','first_name','last_name','user_rols.name as rol','email','active','team_id','level_id' )
-		->join('user_rols', 'user_rols.id', '=', 'users.role_id')
+		->select('users.id','first_name','last_name','user_roles.name as rol','email','active','team_id','level_id')
+		->join('user_roles', 'user_roles.id', '=', 'users.role_id')
 		->where('users.active','1')->get();
 		return $allUsers;
 	}

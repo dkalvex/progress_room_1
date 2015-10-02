@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class User_rol extends Model {
 
-	protected $table = 'user_rols';
+	protected $table = 'user_roles';
 
     /**
      * The attributes that are mass assignable.

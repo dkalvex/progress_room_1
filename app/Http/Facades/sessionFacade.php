@@ -44,7 +44,6 @@ class sessionFacade extends Facade{
 			$request->session()->put('user.active',$user->active);
 			$request->session()->put('user.email',$user->email);
 			$request->session()->put('user.password',$user->password);
-			$request->session()->put('user.remember_token',$user->remember_token);
 			$request->session()->put('user.role_id',$user->role_id);
 			$request->session()->put('user.team_id',$user->team_id);
 			$request->session()->put('user.level_id',$user->level_id);

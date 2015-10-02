@@ -21,7 +21,7 @@ class NewController extends Controller
 			array_push($message,"El usuario fue guardado exitosamente");
 			return view('users/new')->with('message',$message);
 		}catch(Exception $e){
-			array_push($error,"Ha ocurrido al tratar de guardar el usaurio");
+			array_push($error,"Ha ocurrido al tratar de guardar el usuario");
 			echo 'Error en guardar usuario',  $e->getMessage(), "\n";
 			return redirect('users/new')->with('errors',$error);
 		}		

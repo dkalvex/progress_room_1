@@ -3,12 +3,13 @@
 use Illuminate\Support\Facades\Facade;
 use DB;
 use App\Log as Log;
+
 class logFacade extends Facade{
-	public static function log($id,$id_user)
+	public static function log($id, $user_id)
 	{
 		$log = new Log;
-		$log->id_event = $id;
-		$log->id_user = $id_user;
+		$log->event_id = $id;
+		$log->user_id = $user_id;
 		$log->save();
 	}
 

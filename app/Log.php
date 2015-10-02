@@ -16,6 +16,6 @@ class Log extends Model {
      *
      * @var array
      */
-    protected $fillable =['id_event', 'id_user'];
+    protected $fillable =['action_id', 'user_id'];
 
 }
