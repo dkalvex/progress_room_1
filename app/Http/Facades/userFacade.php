@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Facade;
 use DB;
 use App\User as User;
 use App\User_profile as User_profile;
+use App\User_rol as Rol;
+use app\Team as Team;
 class userFacade extends Facade{
 	public static function getAll()
 	{
@@ -33,5 +35,24 @@ class userFacade extends Facade{
 		$user_profile->save();
 		\mailFacade::sendEmailPsd($user,$psd);
 		\logFacade::log('50',$request->session()->get('user.id'));
+	}
+	//information to add User 
+	public static function listRoles()
+	{
+		/*$rol = Rol::all();
+		if (count($rol)>0)
+		{
+			return $rol;
+		}*/
+		return "Ninguno";
+	}
+	public static function listTeams()
+	{
+		$team = Team::all()
+		if (count($team) > 0)
+		{
+			return $team;
+		}
+		return [{"Ninguno"}];
 	}
 }
