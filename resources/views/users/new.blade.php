@@ -51,7 +51,11 @@
 								<div class="form-group">
 									<label for="email">Nomre de usuario</label>
 									<input type="text" class="form-control" name="userName" id="userName" required>
-								</div>								
+								</div>	
+								<div class="form-group">
+									<label for="team_id">Fecha Nacimiento</label>									
+									<input type="text" class="form-control" placeholder="dd/mm/aaaa" id="birth_date"  name="birth_date" required/>
+								</div>							
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
@@ -66,7 +70,7 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="team_id">Equipo</label>
+									<label for="team_id">Equipo</label>									
 									<select class="form-control" name="team_id" id="team_id">
 										<option value="" selected>-Seleccione-</option>
 										@foreach (userFacade::listTeams() as $team)
@@ -81,13 +85,17 @@
 										<option value="1">Activo</option>
 										<option value="0">Inactivo</option>
 									</select>
+								</div>								
+								<div class="form-group">
+									<label for="active">Fecha Ingreso</label>
+									<input type="text" class="form-control" placeholder="dd/mm/aaaa" id="entry_date"  name="entry_date" required/>
 								</div>
 							</div>
 							<div class="col-xs-12">
 								<div class="form-group">
 									<label for="role_id">Rol</label>
 									<select class="form-control" name="role_id" id="role_id">
-										<option value="" selected>-Seleccione-</option>
+										<option value="" selected>-Seleccione-</option>										
 										@foreach (userFacade::listRoles() as $rol)
 										<option value="{{$rol->id}}"> {{ $rol->name }}</option>
 										@endforeach

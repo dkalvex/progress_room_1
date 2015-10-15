@@ -5,7 +5,7 @@ use DB;
 use App\User as User;
 use App\User_profile as User_profile;
 use App\User_rol as Rol;
-use app\Team as Team;
+use App\Team as Team;
 class userFacade extends Facade{
 	public static function getAll()
 	{
@@ -13,7 +13,8 @@ class userFacade extends Facade{
 		$allUsers = DB::table('users')
 		->select('users.id','first_name','last_name','user_roles.name as rol','email','active','team_id','level_id')
 		->join('user_roles', 'user_roles.id', '=', 'users.role_id')
-		->where('users.active','1')->get();
+		->where('users.active','1')
+		->where('users.role_id','<>','1')->get();
 		return $allUsers;
 	}
 	public static function saveUser($request,$psd)
@@ -30,6 +31,8 @@ class userFacade extends Facade{
 
 		$user_profile = new User_profile;
 		$user_profile->username = $request->input('userName');
+		$user_profile->entry_date = $request->input('entry_date');
+		$user_profile->birth_date = $request->input('birth_date');
 		$user_profile->photo = 'default.png';
 		$user_profile->user_id = $user->id;
 		$user_profile->save();
@@ -39,20 +42,14 @@ class userFacade extends Facade{
 	//information to add User 
 	public static function listRoles()
 	{
-		/*$rol = Rol::all();
-		if (count($rol)>0)
-		{
-			return $rol;
-		}*/
-		return "Ninguno";
+		$rol = new Rol;
+		$rol = Rol::all();		
+		return $rol;
 	}
 	public static function listTeams()
-	{
-		$team = Team::all()
-		if (count($team) > 0)
-		{
-			return $team;
-		}
-		return [{"Ninguno"}];
+	{	
+		$team = new Team;
+		$team = Team::all();		
+		return $team;
 	}
 }
