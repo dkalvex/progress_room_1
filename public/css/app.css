@@ -566,7 +566,7 @@ ul.alert-dropdown {
   overflow: hidden !important;
 }
 .side-nav>li>a{
-  color: #4dbac9;
+  color: #ababab;
   border-bottom: inset 2px #1C4258;
   border-top: outset 2px #224B64;
 }
@@ -767,6 +767,25 @@ ul.alert-dropdown {
 /********************************
 * Tables                        *
 ********************************/
+.tablesorter-dropbox th, .tablesorter-dropbox thead td, .tablesorter-dropbox tfoot th, .tablesorter-dropbox tfoot td{
+  background-color: #EF4F69 !important;
+  color: #fff !important;
+  border-color: #EF4F69 !important;
+}
+.header, .tablesorter-header{
+  padding: 4px 20px 4px 4px;
+  background-image: url(data:image/gif;base64,R0lGODlhFQAJAIAAAP///////yH5BAEAAAEALAAAAAAVAAkAAAIXjI+AywnaYnhUMoqt3gZXPmVg94yJVQAAOw==);
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.headerSortUp, .tablesorter-headerSortUp, .tablesorter-headerAsc {
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+  color: #fff;
+}
+.headerSortDown, .tablesorter-headerSortDown, .tablesorter-headerDesc{
+  color: #fff;
+  background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAAP///////yH5BAEAAAEALAAAAAAVAAQAAAINjB+gC+jP2ptn0WskLQA7);
+}
 .pager{
   text-align: left;
 }
