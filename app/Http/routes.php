@@ -25,6 +25,7 @@ Route::group(['middleware' => 'logout'],function()
 Route::group(['middleware' => 'player'],function()
 {		
 	Route::get('home/index', 'Home\HomeController@index');
+	Route::get('events', 'Events\CalendarController@index');
 });
 
 Route::group(['middleware' => 'admin'],function()

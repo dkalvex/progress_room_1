@@ -1099,7 +1099,7 @@ if(!String.prototype.formatNum) {
 					p.setDate(parseInt(day));
 					day = (day < 10 ? '0' + day : day);
 					week.html(self.locale.week.format(self.options.display_week_numbers == true ? p.getWeek() : ''));
-					week.attr('data-cal-week', start + day).show().appendTo(child);
+					//week.attr('data-cal-week', start + day).show().appendTo(child);
 				})
 				.on('mouseleave', function() {
 					week.hide();

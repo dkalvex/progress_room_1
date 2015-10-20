@@ -94,6 +94,16 @@ body{
 .page-header{
   margin: 0px !important;
 }
+.cal-cell1{
+  background: #fff;
+}
+.cal-row-fluid.cal-row-head .cal-cell1, .row-fluid.clearfix.cal-row-head .cal-cell{
+  background: #EF4F69;
+  color: #fff;
+}
+.cal-year-box, .cal-week-box{
+  background: #fff;
+}
 
 /********************************
 * Timelines                     *

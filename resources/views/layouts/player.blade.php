@@ -81,7 +81,7 @@
 						</a>
 					</li>
 					<li id="li-events">
-						<a href="{{ url('/') }}">
+						<a href="{{ url('events') }}">
 							<i class="fa fa-calendar"></i>
 							<span class="sidebar-link">Eventos</span>
 						</a>

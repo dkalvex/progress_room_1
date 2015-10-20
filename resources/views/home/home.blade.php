@@ -305,4 +305,7 @@
 @section('scripts')
 <script src="{{ asset('../resources/assets/js/flot/jquery.flot.min.js') }}"></script>
 <script src="{{ asset('../resources/assets/js/playerCharts.js') }}"></script>
+<script>
+	$("#li-home").addClass("active");
+</script>
 @endsection
