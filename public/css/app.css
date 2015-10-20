@@ -35,15 +35,31 @@ body{
     padding-left: 220px;
   }
 }
-.page-title{
-  font-size: 25px;
-  color: #AFB8B9;
-  padding: 10px 20px;
+
+/*** Search Course Container ***/
+.course-search-container{
   border-bottom: solid 1px #ddd;
+  overflow: auto;
   margin-bottom: 10px;
 }
-.page-title i{
-  margin-right: 10px;
+.course-search-container .form-control, .course-search-container button{
+  margin-bottom: 10px;
+}
+.course-search-container .control-label{
+  margin-top: 8px;
+}
+.course-details{
+  border-top: solid 1px #ddd;
+  margin: 10px 0px;
+  text-align: center;
+}
+.course-info{
+  font-size: 12px;
+  overflow: auto;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  color: #EF4F69;
 }
 
 /********************************
@@ -57,8 +73,8 @@ body{
 .panel-default .chart{
   height: 250px;
 }
-.panel-default .chart-title{
-  color: #4dbac9;
+.chart-title{
+  color: #173241;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -265,7 +281,7 @@ body{
   float: left;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-primary {
-  background-color: #a883b7;
+  background-color: #e4687c;
   color: #fff;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
@@ -285,7 +301,7 @@ body{
   color: #fff;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-danger {
-  background-color: #e4687c;
+  background-color: #a883b7;
   color: #fff;
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {

@@ -5,53 +5,45 @@
 	<div class="row" style="margin-bottom: 10px">
 		<div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="stat green-stat">
-				<div class="col-xs-3">
+				<div class="title-stat">Misiones Hoy</div>
+				<div class="col-xs-4">
 					<div class="total-stat">4</div>
 				</div>
-				<div class="col-xs-9">
-					<div class="chart-stat" id="missions-stat"></div>
-				</div>
-				<div class="col-xs-12">
-					<div class="title-stat text-center">Misiones Hoy</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-3">
-			<div class="stat purple-stat">
-				<div class="col-xs-3">
-					<div class="total-stat">150</div>
-				</div>
-				<div class="col-xs-9">
-					<div class="chart-stat" id="points-stat"></div>
-				</div>
-				<div class="col-xs-12">
-					<div class="title-stat text-center">Puntos Hoy</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-3">
-			<div class="stat orange-stat">
-				<div class="col-xs-3">
-					<div class="total-stat">2</div>
-				</div>
-				<div class="col-xs-9">
-					<div class="chart-stat" id="trophies-stat"></div>
-				</div>
-				<div class="col-xs-12">
-					<div class="title-stat text-center">Total Trofeos</div>
+				<div class="col-xs-8">
+					<div class="chart-stat" id="green-stat"></div>
 				</div>
 			</div>
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-3">
 			<div class="stat blue-stat">
-				<div class="col-xs-3">
+				<div class="title-stat">Puntos Hoy</div>
+				<div class="col-xs-4">
+					<div class="total-stat">150</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="chart-stat" id="blue-stat"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<div class="stat purple-stat">
+				<div class="title-stat">Total Trofeos</div>
+				<div class="col-xs-4">
+					<div class="total-stat">2</div>
+				</div>
+				<div class="col-xs-8">
+					<div class="chart-stat" id="purple-stat"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<div class="stat pink-stat">
+				<div class="title-stat">Total Medallas</div>
+				<div class="col-xs-4">
 					<div class="total-stat">9</div>
 				</div>
-				<div class="col-xs-9">
-					<div class="chart-stat" id="badges-stat"></div>
-				</div>
-				<div class="col-xs-12">
-					<div class="title-stat text-center">Total Medallas</div>
+				<div class="col-xs-8">
+					<div class="chart-stat" id="pink-stat"></div>
 				</div>
 			</div>
 		</div>
@@ -144,7 +136,7 @@
 						</div>
 						<div class="row-fluid">
 							<div class="timeline-wrapper">
-								<div class="timeline-centered">
+								<div class="timeline-centered" style="margin: 0px !important">
 							        <article class="timeline-entry">
 							            <div class="timeline-entry-inner">
 							                <div class="timeline-icon">
@@ -230,7 +222,7 @@
 				<div class="list-group">
 					<a href="#" class="list-group-item">
 						<div class="col-xs-4 col-sm-3">
-							<img class="img img-responsive" src="{{ asset('../resources/assets/img/users') }}/default.png"></img>
+							<img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img>
 						</div>
 						<div class="col-xs-7 col-sm-9">
 							<div class="mission-title">Misión</div>
@@ -249,7 +241,7 @@
 					</a>
 					<a href="#" class="list-group-item">
 						<div class="col-xs-4 col-sm-3">
-							<img class="img img-responsive" src="{{ asset('../resources/assets/img/users') }}/default.png"></img>
+							<img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img>
 						</div>
 						<div class="col-xs-7 col-sm-9">
 							<div class="mission-title">Misión</div>
@@ -268,7 +260,7 @@
 					</a>
 					<a href="#" class="list-group-item">
 						<div class="col-xs-4 col-sm-3">
-							<img class="img img-responsive" src="{{ asset('../resources/assets/img/users') }}/default.png"></img>
+							<img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img>
 						</div>
 						<div class="col-xs-7 col-sm-9">
 							<div class="mission-title">Misión</div>

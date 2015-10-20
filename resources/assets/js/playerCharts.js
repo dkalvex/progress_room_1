@@ -1,4 +1,4 @@
-var topColors = ['#ddd', '#ddd', '#3f4f69', '#ddd', '#ddd'];
+var topColors = ['#ddd', '#ddd', '#e4687c', '#ddd', '#ddd'];
 var path = '../../resources/assets/img/users/';
 
 $(function(){
@@ -27,21 +27,21 @@ $(function(){
     }
   };
 
-  var missions = [[1, 2], [2, 3], [3, 4], [4, 2], [5, 1], [6, 4], [7, 2], [8, 2], [9, 5], [10, 4]];
-  var data_missions = [{data: missions, color: '#3ea58a'}];
-  $.plot($('#missions-stat'), data_missions, line_options);
+  var green = [[1, 2], [2, 3], [3, 4], [4, 2], [5, 1], [6, 4], [7, 2], [8, 2], [9, 5], [10, 4]];
+  var data_green = [{data: green, color: '#3ea58a'}];
+  $.plot($('#green-stat'), data_green, line_options);
 
-  var points = [[1, 60], [2, 50], [3, 80], [4, 100], [5, 120], [6, 200], [7, 150], [8, 50], [9, 40], [10, 150]];
-  var data_points = [{data: points, color: '#9273a0'}];
-  $.plot($('#points-stat'), data_points, line_options);
+  var blue = [[1, 60], [2, 50], [3, 80], [4, 100], [5, 120], [6, 200], [7, 150], [8, 50], [9, 40], [10, 150]];
+  var data_blue = [{data: blue, color: '#448db5'}];
+  $.plot($('#blue-stat'), data_blue, line_options);
 
-  var trophies = [[1, 0], [2, 0], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 2], [10, 2]];
-  var data_trophies = [{data: trophies, color: '#db5700'}];
-  $.plot($('#trophies-stat'), data_trophies, line_options);
+  var purple = [[1, 0], [2, 0], [3, 1], [4, 1], [5, 1], [6, 1], [7, 1], [8, 1], [9, 2], [10, 2]];
+  var data_purple = [{data: purple, color: '#9273a0'}];
+  $.plot($('#purple-stat'), data_purple, line_options);
 
-  var badges = [[1, 1], [2, 3], [3, 4], [4, 4], [5, 5], [6, 7], [7, 7], [8, 8], [9, 9], [10, 9]];
-  var data_badges = [{data: badges, color: '#448db5'}];
-  $.plot($('#badges-stat'), data_badges, line_options);
+  var pink = [[1, 1], [2, 3], [3, 4], [4, 4], [5, 5], [6, 7], [7, 7], [8, 8], [9, 9], [10, 9]];
+  var data_pink = [{data: pink, color: '#c63b50'}];
+  $.plot($('#pink-stat'), data_pink, line_options);
 
   showPlayersTable();
 });

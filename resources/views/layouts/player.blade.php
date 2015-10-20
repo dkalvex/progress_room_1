@@ -81,7 +81,7 @@
 						</a>
 					</li>
 					<li id="li-events">
-						<a href="{{ url('events') }}">
+						<a href="{{ url('calendar') }}">
 							<i class="fa fa-calendar"></i>
 							<span class="sidebar-link">Eventos</span>
 						</a>
@@ -93,7 +93,7 @@
 						</a>
 					</li>
 					<li id="li-courses">
-						<a href="{{ url('/') }}">
+						<a href="{{ url('academy') }}">
 							<i class="fa fa-graduation-cap"></i>
 							<span class="sidebar-link">Cursos</span>
 						</a>

@@ -10,7 +10,7 @@
 				<button class="btn btn-default prev"><i class="fa fa-angle-left"></i></button>
         		<span class="pagedisplay"></span>
         		<button class="btn btn-default next"><i class="fa fa-angle-right"></i></button>
-				<button class="btn btn-warning"><i class="fa fa-trash"></i></button>
+				<button class="btn btn-default last"><i class="fa fa-angle-double-right"></i></button>
         		<select class="pagesize" title="Select page size"> 
 		            <option selected="selected" value="10">10</option> 
 		            <option value="20">20</option> 
@@ -32,7 +32,7 @@
 	    				<li><a href="#">Inactivar</a></li>
 	    			</ul>
 	    		</div>
-	    		<button class="btn btn-danger"><i class="fa fa-warning"></i></button>
+	    		<button class="btn btn-warning"><i class="fa fa-trash"></i></button>
 	    		<button class="btn btn-info"><i class="fa fa-upload"></i></button>
 				<a class="btn btn-primary" href="{{ url('users/new') }}"><i class="fa fa-plus"></i></a>
 			</div>

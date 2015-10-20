@@ -1,21 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.player')
 
 @section('content')
 
-<div class="modal fade" id="events-modal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3></h3>
-            </div>
-            <div class="modal-body" style="height: 300px"></div>
-            <div class="modal-footer">
-                <a href="#" data-dismiss="modal" class="btn">Cerrar</a>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
@@ -47,8 +33,7 @@
 	    			</ul>
 	    		</div>
 	    		<button class="btn btn-warning"><i class="fa fa-trash"></i></button>
-	    		<button class="btn btn-info"><i class="fa fa-upload"></i></button>
-				<a class="btn btn-primary" href="{{ url('events/new') }}"><i class="fa fa-plus"></i></a>
+				<a class="btn btn-primary" href="{{ url('courses/new') }}"><i class="fa fa-plus"></i></a>
 			</div>
 		</div>
 	</div>
@@ -62,8 +47,8 @@
 							<th class="filter-false">Id</th>
 							<th>Título</th>
 							<th>Inicio</th>
-							<th>Fin</th>
-							<th class="filter-select">Lugar</th>
+							<th>Duración</th>
+							<th class="filter-select">Tema</th>
 							<th class="filter-select">Activo</th>
 							<th>Descripción</th>
 						</tr>
@@ -78,10 +63,6 @@
 </div>
 @endsection
 @section('scripts')
-<script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.js"></script>
-<script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.js"></script>
-<script src="http://mottie.github.io/tablesorter/addons/pager/jquery.tablesorter.pager.js"></script>
-<script src="{{ asset('../resources/assets/js/tables.js') }}"></script>
 <script>
 	$("#li-events").addClass("active");
 </script>

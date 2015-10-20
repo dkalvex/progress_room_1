@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.player')
 
 @section('styles')
 <link href="{{ asset('../resources/assets/css/calendar.min.css') }}" rel="stylesheet">

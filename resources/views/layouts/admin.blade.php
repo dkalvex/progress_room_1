@@ -89,7 +89,7 @@
 						</a>
 					</li>
 					<li id="li-courses">
-						<a href="{{ url('/') }}">
+						<a href="{{ url('courses') }}">
 							<i class="fa fa-graduation-cap"></i>
 							<span class="sidebar-link">Cursos</span>
 						</a>

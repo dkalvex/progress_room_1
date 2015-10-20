@@ -25,7 +25,8 @@ Route::group(['middleware' => 'logout'],function()
 Route::group(['middleware' => 'player'],function()
 {		
 	Route::get('home/index', 'Home\HomeController@index');
-	Route::get('events', 'Events\CalendarController@index');
+	Route::get('calendar', 'Events\CalendarController@index');
+	Route::get('academy', 'Courses\AcademyController@index');
 });
 
 Route::group(['middleware' => 'admin'],function()
@@ -35,6 +36,7 @@ Route::group(['middleware' => 'admin'],function()
 	Route::get('users/new', 'Users\NewController@index');
 	Route::post('users/newSave', 'Users\NewController@saveUser');
 	Route::get('events', 'Events\AllController@index');
+	Route::get('courses', 'Courses\AllController@index');
 });
 
 Route::post('login', 'login\LoginController@login');
