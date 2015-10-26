@@ -13,9 +13,39 @@ class userFacade extends Facade{
 		$allUsers = DB::table('users')
 		->select('users.id','first_name','last_name','user_roles.name as rol','email','active','team_id','level_id')
 		->join('user_roles', 'user_roles.id', '=', 'users.role_id')
-		->where('users.active','1')
+		//->where('users.active','1')
 		->where('users.role_id','<>','1')->get();
 		return $allUsers;
+	}
+	public static function getUser($id)
+	{
+		$user= array();
+		$user = DB::table('users')
+		->join('user_profiles', 'user_profiles.user_id', '=', 'users.id')
+		//->where('users.active','1')
+		->where('users.id',$id)->get();
+		return $user;
+	}
+	public static function editUser($request)
+	{
+		$user = new User;
+		$user = User::find($request->input('id'));
+		$user->first_name = $request->input('first_name');
+		$user->last_name = $request->input('last_name');
+		$user->email = $request->input('email');
+		$user->active = $request->input('active');
+		$user->role_id = $request->input('role_id');
+		$user->team_id = $request->input('team_id');
+		$user->save();
+
+		$user_profile = new User_profile;
+		$user_profile = User_profile::find($request->input('id'));
+		$user_profile->username = $request->input('userName');
+		$user_profile->entry_date = $request->input('entry_date');
+		$user_profile->birth_date = $request->input('birth_date');
+		$user_profile->save();
+		\logFacade::log('51',$request->session()->get('user.id'));	
+		return \userFacade::getUser($user->id);	
 	}
 	public static function saveUser($request,$psd)
 	{

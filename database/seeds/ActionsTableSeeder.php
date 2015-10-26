@@ -23,6 +23,8 @@ class ActionsTableSeeder extends Seeder
 			['id' => 13, 'name' => 'Obtener ascenso'],
 			['id' => 14, 'name' => 'Ganar medalla'],
 			['id' => 15, 'name' => 'Completar nivel']
+			['id' => 50, 'name' => 'Crear Usuario']
+			['id' => 51, 'name' => 'Editar Usuario']
 		];
 		\DB::table('actions')->insert($actions);
 	}
