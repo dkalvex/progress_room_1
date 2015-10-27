@@ -20,9 +20,11 @@
 					<div class="stat blue-stat">
 						<div class="title-stat">Número de Visitas</div>
 						<div class="col-xs-4">
+							<!-- Consulta para visitas en últimos 30 días: SELECT SUM(id) FROM logs WHERE action_id = 1 AND created_at > (CURDATE() - INTERVAL 30 DAY) -->
 							<div class="total-stat">1.354</div>
 						</div>
 						<div class="col-xs-8">
+							<!-- Consulta para visitas diarias para gráfica: SELECT SUM(id), DATE(created_at) FROM logs WHERE action_id = 1 AND created_at > (CURDATE() - INTERVAL 30 DAY) GROUP BY DATE(created_at) LIMIT 10-->
 							<div class="chart-stat" id="blue-stat"></div>
 						</div>
 					</div>
@@ -55,6 +57,7 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<div class="chart-title">Distribución de acceso por hora</div>
+							<!-- Consulta para datos de distribución por acceso: SELECT SUM(IF(TIME(created_at) >= '06:00:00' AND TIME(created_at) < '09:00:00', id, 0)) AS six, SUM(IF(TIME(created_at) >= '09:00:00' AND TIME(created_at) < '12:00:00', id, 0)) AS nine, SUM(IF(TIME(created_at) >= '12:00:00' AND TIME(created_at) < '15:00:00', id, 0)) AS twelve, SUM(IF(TIME(created_at) >= '15:00:00' AND TIME(created_at) < '18:00:00', id, 0)) AS fifteen, SUM(IF(TIME(created_at) >= '18:00:00' AND TIME(created_at) < '21:00:00', id, 0)) AS eighteen, SUM(IF(TIME(created_at) >= '21:00:00' AND TIME(created_at) < '24:00:00', id, 0)) AS twentyone FROM logs WHERE action_id = 1 AND created_at > (CURDATE() - INTERVAL 30 DAY) -->
 							<div class="chart" id="access-chart"></div>
 						</div>
 					</div>
@@ -107,7 +110,7 @@
 							<i class="fa fa-user"></i>
 						</div>
 						<div class="timeline-label"><h2><a href="#">{{ $activitie->first_name }} {{ $activitie->last_name }} </a><span>{{ $activitie->name }}</span></h2>
-							<p>{{ $activitie->description }} prueba</p>
+							<p>{{ $activitie->description }}</p>
 						</div>
 					</div>
 				</article>
