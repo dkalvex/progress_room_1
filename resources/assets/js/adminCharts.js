@@ -1,3 +1,4 @@
+//var log = logFacade::getActivities();
 var topColors = ['#4cc3a3', '#4da1d0', '#a883b7', '#e4687c', '#ffc000', '#2f5597'];
 var timeline = [
   {icon: 'fa fa-user', name: 'Jugador', action: ' ha ganado 20 ptos', detail: 'Nivel 2 del curso de Excel superado', style: 'primary'},
@@ -71,7 +72,7 @@ $(function(){
   showPlayersTable();
   showCoursesTable();
   showStats();
-  showTimeline();
+  //showTimeline();
 });
 
 function showPlayersTable(){

@@ -39,6 +39,8 @@ Route::group(['middleware' => 'admin'],function()
 	Route::post('users/editSave', 'Users\EditController@saveUser');
 	Route::get('events', 'Events\AllController@index');
 	Route::get('courses', 'Courses\AllController@index');
+
+	Route::post('users/validaEmail', 'Users\AllController@validateEmail');
 });
 
 Route::post('login', 'login\LoginController@login');

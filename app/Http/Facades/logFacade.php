@@ -13,4 +13,17 @@ class logFacade extends Facade{
 		$log->save();
 	}
 
+	public static function getActivities()
+	{
+
+		$log= array();
+		$log = DB::table('logs')
+		->select('actions.name','users.first_name','users.last_name','description')
+		->join('actions', 'actions.id', '=', 'logs.action_id')
+		->join('users', 'users.id', '=', 'logs.user_id')
+		->where('users.active','1')->take(8)->get();
+
+		return $log;
+	}
+
 }

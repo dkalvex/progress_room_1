@@ -12,4 +12,15 @@ class AllController extends Controller
 		$users= \userFacade::getAll();
 		return view("users/all",['userAll'=>$users]);
 	}
+	public static function validateEmail(Request $request)
+	{
+		$email = array();
+		$email = DB::table('users')
+		->where('email',$request->input('email'))
+		->where('active','1')->get();
+		if(count($email)>0){
+			return count($email);
+		}
+		return count($email);
+	}
 }

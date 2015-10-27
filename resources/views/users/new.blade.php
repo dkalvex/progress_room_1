@@ -15,7 +15,7 @@
 				@if(isset($errors) and count($errors) > 0)
 				<div class='alert alert-warning'>
 					@foreach ($errors as $error)						
-					<ul>;
+					<ul>
 						<li> {{ $error }} </li>
 					</ul>
 					@endforeach
@@ -39,6 +39,8 @@
 								<div class="form-group">
 									<label for="email">Correo electrónico</label>
 									<input type="email" class="form-control" name="email" id="email" required>
+									<div id="error_email">
+									</div>
 								</div>
 								<div class="form-group">
 									<label for="first_name">Nombres</label>
@@ -49,8 +51,8 @@
 									<input type="text" class="form-control" name="last_name" id="last_name" required>
 								</div>
 								<div class="form-group">
-									<label for="email">Nomre de usuario</label>
-									<input type="text" class="form-control" name="userName" id="userName" required>
+									<label for="userName">Nomre de usuario</label>
+									<input type="text"  class="form-control" name="userName" id="userName" required>
 								</div>	
 								<div class="form-group">
 									<label for="team_id">Fecha Nacimiento</label>									
@@ -103,7 +105,7 @@
 								</div>
 								<div class="form-group">
 									<div class="text-center">
-										<button type="submit" class="btn btn-primary btn-full">Guardar</button>
+										<button id="guardar" class="btn btn-primary btn-full">Guardar</button>
 									</div>
 								</div>
 							</div>
@@ -116,6 +118,7 @@
 </div>
 @endsection
 @section('scripts')
+<script src="{{ asset('../resources/assets/js/validations.js') }}"></script>
 <script>
 $("#li-players").addClass("active");
 </script>
