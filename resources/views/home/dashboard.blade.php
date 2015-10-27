@@ -99,20 +99,20 @@
 		</div>
 		<div class="col-xs-12 col-sm-3 timeline-container">
 			<div class="chart-title text-center">Actividad Reciente</div>
-			@foreach (logFacade::getActivities() as $activitie)
 			<div class="timeline-centered" id="timeline">
+			@foreach (logFacade::getActivities() as $activitie)
 				<article class="timeline-entry">
 					<div class="timeline-entry-inner">
 						<div class="timeline-icon bg-primary">
 							<i class="fa fa-user"></i>
 						</div>
 						<div class="timeline-label"><h2><a href="#">{{ $activitie->first_name }} {{ $activitie->last_name }} </a><span>{{ $activitie->name }}</span></h2>
-							<p>{{ $activitie->description }}</p>
+							<p>{{ $activitie->description }} prueba</p>
 						</div>
 					</div>
 				</article>
-			</div>					
-			@endforeach			
+			@endforeach	
+			</div>		
 			<div class="text-center">
 				<button class="btn btn-primary">Ver todo</button>
 			</div>
