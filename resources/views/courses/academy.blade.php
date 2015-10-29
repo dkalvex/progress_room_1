@@ -50,7 +50,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/1">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -68,7 +68,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/2">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -86,7 +86,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/3">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/4">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -122,7 +122,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/5">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -140,7 +140,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/6">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -158,7 +158,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/7">Detalles</a>
 					</div>
 				</div>
 			</div>
@@ -176,151 +176,7 @@
 							<div style="float: left">40 horas</div>
 							<div style="float: right">250 ptos</div>
 						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<button class="btn btn-info btn-half">Detalles</button>
+						<a class="btn btn-info btn-half" href="course/8">Detalles</a>
 					</div>
 				</div>
 			</div>
