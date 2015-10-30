@@ -1661,6 +1661,9 @@ ul.alert-dropdown {
     margin-top: 0px;
   }
 }
+.form-group{
+  overflow: auto;
+}
 
 /*** Labels ***/
 .panel-form label{
@@ -1682,7 +1685,7 @@ ul.alert-dropdown {
   background: transparent;
   border-bottom: solid 3px #ef4f69 !important;
 }
-.input-group-addon{
+.input-group-addon.login-addon{
   border-color: #eee;
   border-radius: 0px;
   -moz-border-radius: 0px;

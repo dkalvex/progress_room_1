@@ -27,13 +27,13 @@
 				<div class="form-group">
 					<div class="input-group">
 						<input type="email" class="form-control login-control" name="email" id="email" placeholder="Correo Electrónico" value="{{ old('email') }}">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+						<span class="input-group-addon login-addon"><i class="glyphicon glyphicon-envelope"></i></span>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="input-group">
 						<input type="password" class="form-control login-control" name="password" id="password" placeholder="Contraseña">
-						<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+						<span class="input-group-addon login-addon"><i class="glyphicon glyphicon-lock"></i></span>
 					</div>
 				</div>
 				<div class="form-group">

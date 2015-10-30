@@ -82,24 +82,24 @@
 							<span class="sidebar-link">Eventos</span>
 						</a>
 					</li>
-					<li id="li-tournaments">
+					<!--li id="li-tournaments">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-trophy"></i>
 							<span class="sidebar-link">Torneos</span>
 						</a>
-					</li>
+					</li-->
 					<li id="li-courses">
 						<a href="{{ url('courses') }}">
 							<i class="fa fa-graduation-cap"></i>
 							<span class="sidebar-link">Cursos</span>
 						</a>
 					</li>
-					<li id="li-opportunities">
+					<!--li id="li-opportunities">
 						<a href="{{ url('/') }}">
 							<i class="fa fa-institution"></i>
 							<span class="sidebar-link">Oportunidades</span>
 						</a>
-					</li>
+					</li-->
 				</ul>
 			</div>
 		</nav>

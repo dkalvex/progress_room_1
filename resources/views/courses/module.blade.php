@@ -43,32 +43,6 @@
 				<a href="#" class="list-group-item success">
 					<i class="fa fa-file course-lesson"></i>Evaluación
 				</a>
-				<a href="#" class="list-group-item disabled">Módulo 2</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 1
-				</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 2
-				</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 3
-				</a>
-				<a href="#" class="list-group-item success">
-					<i class="fa fa-file course-lesson"></i>Evaluación
-				</a>
-				<a href="#" class="list-group-item disabled">Módulo 3</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 1
-				</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 2
-				</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 3
-				</a>
-				<a href="#" class="list-group-item success">
-					<i class="fa fa-file course-lesson"></i>Evaluación
-				</a>
 			</div>
 		</div>
 	</div>
