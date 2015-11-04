@@ -65,7 +65,7 @@
 								<label for="birth_date" class="col-xs-12 col-md-4">Fecha Nacimiento</label>									
 								<div class="col-xs-12 col-md-8">
 									<div class="input-group date">
-										<input type="text" class="form-control" placeholder="dd/mm/aaaa" id="birth_date"  name="birth_date" required/>
+										<input type="text" class="form-control" placeholder="yyyy-mm-dd" id="birth_date"  name="birth_date" required/>
 										<span class="input-group-addon">
 											<i class="fa fa-calendar"></i>
 										</span>
@@ -76,7 +76,7 @@
 								<label for="entry_date" class="col-xs-12 col-md-4">Fecha Ingreso</label>
 								<div class="col-xs-12 col-md-8">
 									<div class="input-group date">
-										<input type="text" class="form-control" placeholder="dd/mm/aaaa" id="entry_date"  name="entry_date" required/>
+										<input type="text" class="form-control" placeholder="yyyy-mm-dd" id="entry_date"  name="entry_date" required/>
 										<span class="input-group-addon">
 											<i class="fa fa-calendar"></i>
 										</span>
@@ -130,11 +130,8 @@
 				<div class="panel-body">
 					<div class="chart-title">Novato</div>
 					<div class="row">
-						<div class="col-xs-6">
-							<img src="{{ asset('../resources/assets/img/users/') }}/default.png" class="img img-responsive img-circle" align="right" width="100">
-						</div>
-						<div class="col-xs-6">
-							<img src="{{ asset('../resources/assets/img/leagues/') }}/level-0.png" class="img img-responsive img-circle" align="left" width="100">
+						<div class="col-xs-6 col-xs-offset-3">
+							<img src="{{ asset('../resources/assets/img/users/') }}/default.png" class="img img-responsive img-circle" style="margin: 0 auto 10px;" width="100">
 						</div>
 					</div>
 					<div class="text-center">
@@ -145,10 +142,10 @@
 						<p>Vestibulum gravida non velit eu mattis. Donec interdum sit amet justo quis luctus. Etiam nec blandit eros, non pretium neque. Phasellus ut aliquet lorem. Sed sit amet consequat diam. Morbi accumsan interdum hendrerit.</p>
 					</div>
 					<div class="text-center">
-						<div class="col-xs-3"><i class="fa fa-facebook"></i> #usuario</div>
-						<div class="col-xs-3"><i class="fa fa-twitter"></i> @usuario</div>
-						<div class="col-xs-3"><i class="fa fa-linkedin"></i> #usuario</div>
-						<div class="col-xs-3"><i class="fa fa-google-plus"></i> #usuario</div>
+						<div class="col-xs-6"><i class="fa fa-facebook"></i> #usuario</div>
+						<div class="col-xs-6"><i class="fa fa-twitter"></i> @usuario</div>
+						<div class="col-xs-6"><i class="fa fa-linkedin"></i> #usuario</div>
+						<div class="col-xs-6"><i class="fa fa-google-plus"></i> #usuario</div>
 					</div>
 				</div>
 			</div>
@@ -162,7 +159,7 @@
 <script>
 	$("#li-players").addClass("active");
 	$('.date').datepicker({
-        format: "dd-mm-yyyy",
+        format: "yyyy-mm-dd",
         todayBtn: "linked",
         language: "es",
         daysOfWeekDisabled: "0,6",

@@ -44,7 +44,11 @@
 				</li>
 				<li class="dropdown" id="user-profile">
 					<a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+						@if (Session::get('user.photo') == '')
+						<img src="{{ asset('../resources/assets/img/users') }}/default.png" class="photo-profile">
+						@else
 						<img src="{{ asset('../resources/assets/img/users') }}/{{ \Session::get('user.photo') }}" class="photo-profile">						
+						@endif
 						{{ \Session::get('user.first_name') }} {{ \Session::get('user.last_name') }}
 						<b class="caret"></b>
 					</a>

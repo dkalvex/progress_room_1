@@ -6,14 +6,19 @@ use DB;
 
 class CourseController extends Controller
 {
-	public function index(Request $request)
-	{
-		return View('courses/course');
+	public function index(Request $request, $id)
+	{				
+		$course = \courseFacade::getCourse($id);
+		$modules = \courseFacade::getModules($id);
+		$comments = \courseFacade::getComments($id);
+		
+		return view('courses/course')->with('course',$course)->with('modules',$modules)->with('comments',$comments);
 	}
 
-	public function module(Request $request)
+	public function module(Request $request, $id)
 	{
-		return View('courses/module');
+		$module = \courseFacade::getLessons($id);
+		return view('courses/module')->with('module',$module);
 	}
 
 	public function quiz(Request $request)

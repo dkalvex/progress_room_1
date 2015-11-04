@@ -10,19 +10,21 @@
 		<div class="col-xs-12 col-md-8">
 			<div id="video-container">
 				<video width="640" height="360" style="width: 100%; height: 100%;">
-					<source src="https://www.youtube.com/watch?v=LDVyVBY55Ck" type="video/youtube">
+					@if($module{0}->type_id == 1)
+					@elseif($module{0}->type_id == 2)
+					@elseif($module{0}->type_id == 3)
+					<source src="{{$module{0}->url}}" type="video/youtube">
 					<!--source src="movie.mp4" type="video/mp4"-->
 					<!--source src="movie.webm" type="video/webm"-->
+					@endif
 				</video>
 			</div>
 			<div class="panel panel-default" style="margin-top: 20px">
 				<div class="panel-body">
-					<div class="course-title">Módulo X</div>
+					<div class="course-title">{{$module{0}->module_name}}</div>
 					<div class="course-dates">
 						<div class="course-description">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut finibus ex, id rutrum urna. Morbi lorem quam, varius at finibus vitae, ornare in lacus. Ut hendrerit nisl in metus iaculis, id luctus mi rhoncus. In malesuada purus eu sem venenatis, a faucibus ante mollis.</p>
-							<p>Vestibulum gravida non velit eu mattis. Donec interdum sit amet justo quis luctus. Etiam nec blandit eros, non pretium neque. Phasellus ut aliquet lorem. Sed sit amet consequat diam. Morbi accumsan interdum hendrerit.</p>
-							<p>Proin scelerisque tempor condimentum. Sed vitae eros est. Integer vehicula turpis vitae felis congue, in placerat augue laoreet. Vivamus non molestie eros. Vivamus commodo est et sapien auctor ultricies. Suspendisse sagittis ipsum sed est bibendum, vulputate imperdiet leo iaculis.</p>
+							<p>{{$module{0}->module_description}}</p>
 						</div>
 					</div>
 				</div>
@@ -30,19 +32,12 @@
 		</div>
 		<div class="col-xs-12 col-md-4">
 			<div class="list-group list-group-course">
-				<a href="#" class="list-group-item disabled">Módulo 1</a>
-				<a href="#" class="list-group-item active">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 1
-				</a>
+				<a href="#" class="list-group-item disabled">{{$module{0}->module_name}}</a>
+				@for ($i = 0; $i < count($module); $i++)
 				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 2
+					<i class="fa fa-video-camera course-lesson"></i>{{$module[$i]->lesson_name}}
 				</a>
-				<a href="#" class="list-group-item">
-					<i class="fa fa-video-camera course-lesson"></i>Contenido 3
-				</a>
-				<a href="#" class="list-group-item success">
-					<i class="fa fa-file course-lesson"></i>Evaluación
-				</a>
+				@endfor
 			</div>
 		</div>
 	</div>

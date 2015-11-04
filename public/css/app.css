@@ -110,6 +110,10 @@ body{
 .course-lesson{
   padding-right: 10px;
 }
+.course-paragraph{
+  height: 100px;
+  overflow: hidden;
+}
 
 /********************************
 * Video                         *

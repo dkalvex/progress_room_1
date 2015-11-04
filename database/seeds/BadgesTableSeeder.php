@@ -38,6 +38,8 @@ class BadgesTableSeeder extends Seeder
 			['id' => 28, 'name' => 'Doble dígito', 'description' => '', 'image' => 'doubleyear.png', 'league_id' => null],
 			['id' => 29, 'name' => 'Excelente desempeño', 'description' => '', 'image' => 'excellent.png', 'league_id' => null],
 			['id' => 30, 'name' => 'Buen desempeño', 'description' => '', 'image' => 'good.png', 'league_id' => null],
+			['id' => 31, 'name' => 'Excel Básico', 'description' => '', 'image' => 'basicExcel.png', 'league_id' => null],
+			['id' => 32, 'name' => 'Excel Intermedio', 'description' => '', 'image' => 'intermediateExcel.png', 'league_id' => null]
 		];
 
 		\DB::table('badges')->insert($badges);

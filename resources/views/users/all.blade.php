@@ -45,30 +45,41 @@
 					<thead>
 						<tr>
 							<th class="filter-false"></th>
-							<th class="filter-false">Id</th>
-							<th>Nombre</th>
-							<th>Apellido</th>
-							<th class="filter-select">Rol</th>
+							<th class="filter-false"></th>
 							<th>Email</th>
-							<th class="filter-select">Activo</th>
-							<th>Equipo</th>
-							<th>Nivel</th>
-							<th></th>
+							<th>Nombre</th>
+							<th class="filter-select">Rol</th>
+							<th class="filter-select">Estado</th>
+							<th>Antigüedad</th>
+							<th>Puntos</th>
 						</tr>
 					</thead>
 					<tbody>
 						@for ($i = 0; $i < count($userAll); $i++)						
 						<tr>
+							<?php
+								$days = (strtotime(date("Y-m-d")) - strtotime($userAll[$i]->entry_date)) / (60 * 60 * 24);
+								$years = $days / 365;
+								if($years < 1){
+									$oldest = (intval($days / 30) < 2 ? intval($days / 30) . ' mes' : intval($days / 30) . ' meses');
+								}else{
+									$oldest = (intval($years) < 2 ? intval($years) . ' año': intval($years) . ' años');
+								}
+							?>
 							<td><input type='checkbox' class='user-check' id="{{$userAll[$i]->id}}"></td>
-							<td>{{$userAll[$i]->id}}</td>
-							<td>{{$userAll[$i]->first_name}}</td>
-							<td>{{$userAll[$i]->last_name}}</td>
+							<td><img src='{{ asset("../resources/assets/img/users") }}/{{$userAll[$i]->photo}}' width='30'></td>
+							<td><a href="{{ url('users/edit/id/'.$userAll[$i]->id) }}">{{$userAll[$i]->email}}</a></td>
+							<td><a href="{{ url('users/edit/id/'.$userAll[$i]->id) }}">{{$userAll[$i]->first_name}} {{$userAll[$i]->last_name}}</a></td>
 							<td>{{$userAll[$i]->rol}}</td>
-							<td>{{$userAll[$i]->email}}</td>
-							<td>{{$userAll[$i]->active}}</td>
-							<td>{{$userAll[$i]->team_id}}</td>
-							<td>{{$userAll[$i]->level_id}}</td>
-							<td><a class='btn btn-primary' href="{{ url('users/edit/id/'.$userAll[$i]->id) }}"><i class='fa fa-plus'></i></a></td>
+							@if ($userAll[$i]->active == 1)
+							<td>Activo</td>
+							@elseif ($userAll[$i]->active == 2)
+							<td>Inactivo</td>
+							@else
+							<td>Eliminado</td>
+							@endif
+							<td>{{$oldest}}</td>
+							<td>{{$userAll[$i]->actual_points}}</td>
 						</tr>
 						@endfor
 					</tbody>

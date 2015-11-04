@@ -37,150 +37,34 @@
 		</div>
 	</div>
 	<div class="row">
+		@for ($i = 0; $i < count($courseAll); $i++)
+		<?php
+			$data = explode(".", $courseAll[$i]->description);
+			$description = $data[0] . ". " . $data[1] . ".";
+		?>				
 		<div class="col-xs-6 col-sm-4 col-md-3">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
+						@if($courseAll[$i]->image == '')
+							<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
+						@else
+							<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/{{ $courseAll[$i]->image }}"></img></center>
+						@endif
 					</div>
 					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
+						<h4>{{$courseAll[$i]->name}}</h4>
+						<p class="course-paragraph">{{$description}}</p>
 						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
+							<div style="float: left">{{$courseAll[$i]->likes}} likes</div>
+							<div style="float: right">{{$courseAll[$i]->awarded_points}} ptos</div>
 						</div>
-						<a class="btn btn-info btn-half" href="course/1">Detalles</a>
+						<a class="btn btn-info btn-half" href="course/{{$courseAll[$i]->id}}">Ver más</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/2">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/3">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/4">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/5">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/6">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/7">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 col-sm-4 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div class="col-xs-12">
-						<center><img class="img img-responsive" src="{{ asset('../resources/assets/img/courses') }}/default.png"></img></center>
-					</div>
-					<div class="col-xs-12 course-details">
-						<h4>Nombre del curso</h4>
-						<p>Descripción general del curso para indicar cuáles van a ser los conocimientos adquiridos por el jugador</p>
-						<div class="course-info">
-							<div style="float: left">40 horas</div>
-							<div style="float: right">250 ptos</div>
-						</div>
-						<a class="btn btn-info btn-half" href="course/8">Detalles</a>
-					</div>
-				</div>
-			</div>
-		</div>
+		@endfor
 	</div>
 </div>
 @endsection
