@@ -59,7 +59,7 @@
 					<div class="course-wrapper">
 						@for ($i = 0; $i < count($modules); $i++)
 						<div class="course-content">
-							<div class="course-unit"><a href="../module/{{$modules[$i]->module_id}}">{{$modules[$i]->module_name}}</a></div>
+							<div class="course-unit"><a href="../module/{{$modules[$i]->module_id}}/1">{{$modules[$i]->module_name}}</a></div>
 						</div>
 						@endfor
 					</div>
@@ -70,6 +70,16 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="course-title">Comentarios</div>
+					<div class="course-form">
+						<form action="#" method="post" role="form" enctype="multipart/form-data" class="form-horizontal" id="comment-form">
+							<div class="form-group">
+								<textarea class="form-control" id="course-comment" name="course-comment" placeholder="Danos tu opinión acerca del curso"></textarea>
+							</div>
+							<div class="form-group">
+								<div class="text-right"><button class="btn btn-primary" type="submit">Publicar</button></div>
+							</div>
+						</form>
+					</div>
 					<div class="timeline-wrapper">
 						<div class="timeline-centered" style="margin: 0px !important">
 							@for ($i = 0; $i < count($comments); $i++)

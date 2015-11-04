@@ -28,7 +28,7 @@ Route::group(['middleware' => 'player'],function()
 	Route::get('calendar', 'Events\CalendarController@index');
 	Route::get('academy', 'Courses\AcademyController@index');
 	Route::get('course/{id}', 'Courses\CourseController@index');
-	Route::get('module/{id}', 'Courses\CourseController@module');
+	Route::get('module/{id}/{od}', 'Courses\CourseController@module');
 	Route::get('quiz/{id}', 'Courses\CourseController@quiz');
 });
 

@@ -52,11 +52,23 @@ class courseFacade extends Facade{
 
 		return $comments;
 	}
+	public static function getLesson($id, $od)
+	{
+		$lesson = array();
+		$lesson = DB::table('lessons')
+		->select('lessons.id as lesson_id','lessons.name as lesson_name','lessons.description as lesson_description','order as lesson_order','url','type_id')
+		->join('resources', 'lessons.id', '=', 'resources.lesson_id')
+		->where('module_id',$id)
+		->where('order',$od)
+		->get();
+
+		return $lesson;
+	}
 	public static function getLessons($id)
 	{
 		$lessons = array();
 		$lessons = DB::table('lessons')
-		->select('modules.id as module_id','modules.name as module_name','modules.description as module_description','lessons.id as lesson_id','lessons.name as lesson_name','lessons.order as lesson_order','url','type_id')
+		->select('modules.id as module_id','modules.name as module_name','modules.description as module_description','lessons.id as lesson_id','lessons.name as lesson_name','lessons.order as lesson_order','url','type_id','course_id')
 		->join('resources', 'lessons.id', '=', 'resources.lesson_id')
 		->join('modules', 'lessons.module_id', '=', 'modules.id')
 		->where('module_id',$id)

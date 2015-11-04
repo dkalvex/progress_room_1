@@ -111,8 +111,13 @@ body{
   padding-right: 10px;
 }
 .course-paragraph{
-  height: 100px;
+  height: 100px !important;
   overflow: hidden;
+}
+.course-form{
+  padding: 0px 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #EF4F69;
 }
 
 /********************************
@@ -1103,7 +1108,7 @@ div.mejs-speed-button {
   position: absolute;
   display: block;
   width: 4px;
-  background: #f5f5f6 !important;
+  background: #EF4F69 !important;
   /*left: 50%;*/
   top: 20px;
   bottom: 20px;
@@ -1215,9 +1220,9 @@ div.mejs-speed-button {
   -moz-border-radius: 20px;
   border-radius: 20px;
   text-align: center;
-  -moz-box-shadow: 0 0 0 5px #f5f5f6;
-  -webkit-box-shadow: 0 0 0 5px #f5f5f6;
-  box-shadow: 0 0 0 5px #f5f5f6;
+  -moz-box-shadow: 0 0 0 5px #EF4F69;
+  -webkit-box-shadow: 0 0 0 5px #EF4F69;
+  box-shadow: 0 0 0 5px #EF4F69;
   line-height: 40px;
   font-size: 15px;
   float: left;
@@ -1248,7 +1253,7 @@ div.mejs-speed-button {
 }
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
-  background: #f5f5f6 !important;
+  background: rgba(30,71,93,0.15) !important;
   padding: 1em;
   margin-left: 60px;
   -webkit-background-clip: padding-box;
@@ -1266,7 +1271,7 @@ div.mejs-speed-button {
   height: 0;
   border-style: solid;
   border-width: 9px 9px 9px 0;
-  border-color: transparent #f5f5f6 transparent transparent !important;
+  border-color: transparent rgba(30,71,93,0.15) transparent transparent !important;
   left: 0;
   top: 10px;
   margin-left: -9px;

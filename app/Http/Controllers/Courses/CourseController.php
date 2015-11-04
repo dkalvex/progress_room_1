@@ -15,10 +15,11 @@ class CourseController extends Controller
 		return view('courses/course')->with('course',$course)->with('modules',$modules)->with('comments',$comments);
 	}
 
-	public function module(Request $request, $id)
+	public function module(Request $request, $id, $od)
 	{
+		$lesson = \courseFacade::getLesson($id, $od);
 		$module = \courseFacade::getLessons($id);
-		return view('courses/module')->with('module',$module);
+		return view('courses/module')->with('module',$module)->with('lesson',$lesson);
 	}
 
 	public function quiz(Request $request)
