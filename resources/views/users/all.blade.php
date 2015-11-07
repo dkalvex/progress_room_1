@@ -28,8 +28,8 @@
 						<i class="fa fa-bars"></i><span class="caret" style="margin-left: 5px;"></span>
 					</button>
 					<ul class="dropdown-menu" id="action-dropdown">
-						<li><a href="#">Activar</a></li>
-						<li><a href="#">Inactivar</a></li>
+						<li><a onclick="activateUsers()" href="#">Activar</a></li>
+						<li><a onclick="inactivateUsers()" href="#">Inactivar</a></li>
 					</ul>
 				</div>
 				<button class="btn btn-warning" onclick="deleteUser()"><i  class="fa fa-trash"></i></button>
@@ -88,6 +88,7 @@
 		</div>
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<input type="hidden" name="select_id" id="select_id">
+		<input type="hidden" name="tipo_update" id="tipo_update">
 	</div>
 	<div class="modal fade" id="modal_delete_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		<div class="modal-dialog" role="document">

@@ -23,12 +23,13 @@ class AllController extends Controller
 		}
 		return count($email);
 	}
-	public static function deleteUser(Request $request)
+	public static function updateBeenUser(Request $request)
 	{
 		$ids = $request->input('select_id');
+		$been = $request->input('tipo_update');
 		$valores = explode(",",$ids);
 		foreach ($valores as $valor ) {
-			\userFacade::deleteUser($valor);
+			\userFacade::updateBeenUser($been,$valor);
 		}
 		return "Usuarios eliminados correctamente";	
 	}

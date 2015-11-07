@@ -14,14 +14,14 @@ class userFacade extends Facade{
 		->select('users.id','first_name','last_name','user_roles.name as rol','email','photo','entry_date','actual_points','active')
 		->join('user_roles', 'user_roles.id', '=', 'users.role_id')
 		->join('user_profiles', 'user_profiles.user_id', '=', 'users.id')
-		->where('users.active','<>','3')
+		//->where('users.active','<>','3')
 		->where('users.role_id','<>','1')->get();
 		return $allUsers;
 	}
-	public static function deleteUser($id)
+	public static function updateBeenUser($estado,$id)
 	{
 		$user = User::find($id);
-		$user->active = "3";
+		$user->active = $estado;
 		$user->save();
 		return true;
 	}

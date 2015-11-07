@@ -44,7 +44,7 @@ Route::group(['middleware' => 'admin'],function()
 	Route::get('courses', 'Courses\AllController@index');
 
 	Route::post('users/validaEmail', 'Users\AllController@validateEmail');
-	Route::post('users/deleteUser', 'Users\AllController@deleteUser');
+	Route::post('users/updateBeenUser', 'Users\AllController@updateBeenUser');
 });
 
 Route::post('login', 'login\LoginController@login');
