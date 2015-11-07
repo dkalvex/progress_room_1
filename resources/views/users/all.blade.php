@@ -32,7 +32,7 @@
 						<li><a href="#">Inactivar</a></li>
 					</ul>
 				</div>
-				<button class="btn btn-warning"><i class="fa fa-trash"></i></button>
+				<button class="btn btn-warning" onclick="deleteUser()"><i  class="fa fa-trash"></i></button>
 				<button class="btn btn-info"><i class="fa fa-upload"></i></button>
 				<a class="btn btn-primary" href="{{ url('users/new') }}"><i class="fa fa-plus"></i></a>
 			</div>
@@ -58,15 +58,15 @@
 						@for ($i = 0; $i < count($userAll); $i++)						
 						<tr>
 							<?php
-								$days = (strtotime(date("Y-m-d")) - strtotime($userAll[$i]->entry_date)) / (60 * 60 * 24);
-								$years = $days / 365;
-								if($years < 1){
-									$oldest = (intval($days / 30) < 2 ? intval($days / 30) . ' mes' : intval($days / 30) . ' meses');
-								}else{
-									$oldest = (intval($years) < 2 ? intval($years) . ' año': intval($years) . ' años');
-								}
+							$days = (strtotime(date("Y-m-d")) - strtotime($userAll[$i]->entry_date)) / (60 * 60 * 24);
+							$years = $days / 365;
+							if($years < 1){
+								$oldest = (intval($days / 30) < 2 ? intval($days / 30) . ' mes' : intval($days / 30) . ' meses');
+							}else{
+								$oldest = (intval($years) < 2 ? intval($years) . ' año': intval($years) . ' años');
+							}
 							?>
-							<td><input type='checkbox' class='user-check' id="{{$userAll[$i]->id}}"></td>
+							<td><input type='checkbox' class='user-check' onclick="checkId({{$userAll[$i]->id}})" id="{{$userAll[$i]->id}}"></td>
 							<td><img src='{{ asset("../resources/assets/img/users") }}/{{$userAll[$i]->photo}}' width='30'></td>
 							<td><a href="{{ url('users/edit/id/'.$userAll[$i]->id) }}">{{$userAll[$i]->email}}</a></td>
 							<td><a href="{{ url('users/edit/id/'.$userAll[$i]->id) }}">{{$userAll[$i]->first_name}} {{$userAll[$i]->last_name}}</a></td>
@@ -86,6 +86,24 @@
 				</table>
 			</div>
 		</div>
+		<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		<input type="hidden" name="select_id" id="select_id">
+	</div>
+	<div class="modal fade" id="modal_delete_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button  type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Información</h4>
+				</div>
+				<div class="modal-body">
+					<label id="informations"></label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">ok</button>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 @endsection
@@ -94,6 +112,7 @@
 <script src="http://mottie.github.io/tablesorter/js/jquery.tablesorter.widgets.js"></script>
 <script src="http://mottie.github.io/tablesorter/addons/pager/jquery.tablesorter.pager.js"></script>
 <script src="{{ asset('../resources/assets/js/tables.js') }}"></script>
+<script src="{{ asset('../resources/assets/js/functions.js') }}"></script>
 <script>
 $("#li-players").addClass("active");
 </script>
