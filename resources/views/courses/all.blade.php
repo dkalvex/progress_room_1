@@ -1,4 +1,4 @@
-@extends('layouts.player')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -64,6 +64,6 @@
 @endsection
 @section('scripts')
 <script>
-	$("#li-events").addClass("active");
+	$("#li-courses").addClass("active");
 </script>
 @endsection

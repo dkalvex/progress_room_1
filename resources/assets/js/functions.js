@@ -76,3 +76,8 @@ function activateUsers(){
 $('#modal_delete_user').bind('hidden.bs.modal', function () {
  location.reload();
 });
+
+/*$("#set_image").change(function(){
+  alert($("#set_image").val());
+   $("#ico_course").attr("src",'../../resources/assets/img/courses/'+$("#set_image").val());
+});*/

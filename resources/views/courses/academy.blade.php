@@ -34,7 +34,11 @@
 		@for ($i = 0; $i < count($courseAll); $i++)
 		<?php
 			$data = explode(".", $courseAll[$i]->description);
-			$description = $data[0] . ". " . $data[1] . ".";
+			if(count($data)>1){
+				$description = $data[0] . ". " . $data[1] . ".";
+			}else{
+				$description = ($courseAll[$i]->description);
+			}			
 		?>				
 		<div class="col-xs-6 col-sm-4 col-md-3">
 			<div class="panel panel-default">

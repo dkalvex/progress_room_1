@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Facade;
 use DB;
 use App\Course as Course;
+use App\Badge as Badge;
 use App\Module as Module;
 use App\Lesson as Lesson;
+use App\Course_calendar as course_calendars;
 use App\Resource as Resource;
 use App\Resource_type as Resource_type;
 
@@ -16,6 +18,13 @@ class courseFacade extends Facade{
 		->select('courses.id as id','courses.name as name','courses.description as description','awarded_points','likes','image','active')
 		->join('badges', 'badges.id', '=', 'courses.badge_id')->get();
 		return $allCourses;
+	}
+	public static function getAllBadges()
+	{
+		$allBadges = new Badge;
+		$allBadges = Badge::all();
+
+		return $allBadges;
 	}
 	public static function getCourse($id)
 	{
@@ -76,5 +85,25 @@ class courseFacade extends Facade{
 		->get();
 
 		return $lessons;
+	}
+	public static function saveCourse($request)
+	{		
+
+		$course = new Course;
+		$course->name = $request->input('name');
+		$course->description = $request->input('description');
+		$course->awarded_points = $request->input('awarded_points');
+		$course->redeemable_points = $request->input('redeemable_points');
+		$course->active = "1";
+		$course->badge_id = $request->input('set_image');
+		$course->save();		
+
+		$course_calendars = new course_calendars;
+		$course_calendars->begin_date = $request->input('begin_date');
+		$course_calendars->end_date = $request->input('end_date');
+		$course_calendars->course_id = $course->id;		
+		$course_calendars->save();
+
+		\logFacade::log('60',$request->session()->get('user.id'));
 	}
 }
