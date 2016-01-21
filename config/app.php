@@ -197,7 +197,8 @@ return [
 		'mailFacade'=> 'App\Http\Facades\mailFacade',
 		'logFacade' => 'App\Http\Facades\logFacade',
 		'sessionFacade' => 'App\Http\Facades\sessionFacade',
-		'courseFacade' => 'App\Http\Facades\courseFacade',
+		'courseFacade'  => 'App\Http\Facades\courseFacade',
+		'moduleFacade' => 'App\Http\Facades\moduleFacade',
 	],
 
 ];

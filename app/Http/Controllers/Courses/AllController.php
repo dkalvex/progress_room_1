@@ -8,6 +8,7 @@ class AllController extends Controller
 {
 	public function index(Request $request)
 	{
-		return View('courses/all');
+		$courses= \courseFacade::getAll();
+		return View('courses/all',['courseAll'=>$courses]);
 	}
 }

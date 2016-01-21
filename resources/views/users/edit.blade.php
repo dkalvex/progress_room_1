@@ -14,8 +14,7 @@
 						<div class="chart-title">Información General</div>
 						<form role="form" method="POST" action="{{ url('/users/editSave') }}" id="NewUser-form" class="form-horizontal">
 							<div class="form-group">
-								<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">								
 								@if(isset($errors) and count($errors) > 0)
 								<div class='alert alert-warning'>
 									@foreach ($errors as $error)						

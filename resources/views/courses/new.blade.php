@@ -34,6 +34,7 @@
 									</ul>
 									@endforeach
 								</div>
+								</script>
 								@endif
 							</div>
 							<div class="form-group">
@@ -103,7 +104,7 @@
 								<div class="text-center">
 									<button id="guardar" class="btn btn-primary btn-full">Guardar</button>
 								</div>
-							</div>		
+							</div>							
 						</form>
 					</div>
 				</div>

@@ -54,7 +54,14 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+						@for ($i = 0; $i < count($courseAll); $i++)						
+						<tr>							
+							<td><input type='checkbox' class='user-check' onclick="checkId({{$courseAll[$i]->id}})" id="{{$courseAll[$i]->id}}"></td>							
+							<td><a href="{{ url('courses/edit/id/'.$courseAll[$i]->id) }}">{{$courseAll[$i]->id}}</a></td>
+							<td><a href="{{ url('courses/edit/id/'.$courseAll[$i]->id) }}">{{$courseAll[$i]->name}}</a></td>
+							<td>{{$courseAll[$i]->description}}</td>							
+						</tr>
+						@endfor
 					</tbody>
 				</table>
 			</div>

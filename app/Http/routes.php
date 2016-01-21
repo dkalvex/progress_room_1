@@ -44,6 +44,9 @@ Route::group(['middleware' => 'admin'],function()
 	Route::get('courses', 'Courses\AllController@index');
 	Route::get('courses/new', 'Courses\NewController@index');
 	Route::post('courses/newSave', 'Courses\NewController@saveCourse');
+	Route::post('courses/editSave', 'Courses\EditController@saveCourse');
+	Route::get('courses/edit/id/{id}', 'Courses\EditController@getCourse');
+	Route::post('Modules/newSave', 'Modules\NewController@saveModule');
 
 	Route::post('users/validaEmail', 'Users\AllController@validateEmail');
 	Route::post('users/updateBeenUser', 'Users\AllController@updateBeenUser');
