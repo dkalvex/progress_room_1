@@ -121,7 +121,11 @@
 					<div class="course-title">Contenido</div>
 					<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#formModulos">Agregar</button>
 					<div class="course-wrapper">
-
+						@for ($i = 0; $i < count($modules); $i++)
+						<div class="course-content">
+							<div class="course-unit"><a href="../module/{{$modules[$i]->module_id}}/1">{{$modules[$i]->module_name}}</a></div>
+						</div>
+						@endfor
 					</div>
 				</div>
 			</div>
