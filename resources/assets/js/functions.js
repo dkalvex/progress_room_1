@@ -1,4 +1,5 @@
 function checkId(id) {
+  alert(id);
   select_id = $("#select_id");
   if($("#"+id).prop("checked")){
     if(select_id.val() !=""){
@@ -20,6 +21,7 @@ function checkId(id) {
     }
     select_id.val(finalIds);
   }
+  alert(finalIds);
 }
 function deleteUser(){  
   if($("#select_id").val() == ""){

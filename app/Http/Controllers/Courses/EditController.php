@@ -22,10 +22,9 @@ class EditController extends Controller
 		$message = array();
 		try{
 			\courseFacade::editCourse($request);
-			$course = \courseFacade::getCourse($request->input('course_id'));
-			$modules = \courseFacade::getModules($request->input('course_id'));		
+			$course = \courseFacade::getCourse($request->input('course_id'));			
 			array_push($message,"El curso fue editado exitosamente");
-			return view('courses/edit')->with('message',$message)->with('course',$course)->with('modules',$modules);
+			return view('courses/edit')->with('message',$message)->with('course',$course);
 		}catch(Exception $e){
 			array_push($error,"Ha ocurrido al tratar de guardar el curso");
 			return view('courses/edit')->with('message',$message);

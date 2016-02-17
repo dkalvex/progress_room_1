@@ -14,9 +14,9 @@
 						<div class="chart-title">Información General</div>
 						<form role="form" method="POST" action="{{ url('/courses/editSave') }}" id="NewUser-form" class="form-horizontal">
 							<div class="form-group">
-								<input type="hidden" name="_token" value="{{ csrf_token() }}">
-								<input type="hidden" name="calendar_id" value="{{$course{0}->calendar_id}}">
-								<input type="hidden" name="course_id" value="{{$course{0}->id}}">
+								<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+								<input type="hidden" name="calendar_id" id="calendar_id" value="{{$course{0}->calendar_id}}">
+								<input type="hidden" name="course_id" id="course_id" value="{{$course{0}->id}}">
 								@if(isset($errors) and count($errors) > 0)
 								<div class='alert alert-warning'>
 									@foreach ($errors as $error)						
@@ -114,18 +114,15 @@
 				</div>
 			</div>
 		</div>		
-		
 		<div class="col-xs-12 col-md-8">
+			<div class='alert alert-success' id="alert_model" style="display:none">
+			</div>
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="course-title">Contenido</div>
-					<button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#formModulos">Agregar</button>
-					<div class="course-wrapper">
-						@for ($i = 0; $i < count($modules); $i++)
-						<div class="course-content">
-							<div class="course-unit"><a href="../module/{{$modules[$i]->module_id}}/1">{{$modules[$i]->module_name}}</a></div>
-						</div>
-						@endfor
+					<button type="button" onClick="$('#alert_model').css('display','none')" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#formModulos">Agregar</button>
+					<div class="course-wrapper" id='container_modules'>
+						
 					</div>
 				</div>
 			</div>
@@ -159,20 +156,20 @@
 						<button type="button" class="close" data-dismiss="modal">&times;</button>
 						<h4 class="modal-title">Crear Modulos</h4>						
 					</div>
-					<form role="form" method="POST" action="{{ url('/Modules/newSave') }}" id="NewModule-form" class="form-horizontal">														
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-						<input type="hidden" name="course_id" value="{{$course{0}->id}}">
+					<form role="form" method="POST" id="NewModule-form" class="form-horizontal">														
+						<!--<input type="hidden" name="token_module" value="{{ csrf_token() }}">-->
+						<!--<input type="hidden" name="course_id" value="{{$course{0}->id}}">-->
 						<div class="modal-body">
 							<div class="form-group">
 								<label for="name" class="col-xs-12 col-md-4">Nombre del Modulo</label>
 								<div class="col-xs-12 col-md-8">
-									<input type="text" class="form-control" name="name" id="name" required>
+									<input type="text" class="form-control" name="name_module" id="name_module" required>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="description" class="col-xs-12 col-md-4">Descripción</label>
 								<div class="col-xs-12 col-md-8">
-									<input type="text" class="form-control" name="description" id="description" required>
+									<input type="text" class="form-control" name="description_module" id="description_module" required>
 								</div>
 							</div>
 							<div class="form-group">
@@ -189,7 +186,7 @@
 							</div>							
 						</div>
 						<div class="modal-footer">
-							<button id="guardar" class="btn btn-primary">Guardar</button>
+							<button id="guardar" onClick="saveModule();" data-dismiss="modal" class="btn btn-primary">Guardar</button>
 							<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
 						</div>
 					</form>
@@ -210,6 +207,7 @@ $(function() {
 </script>
 @endif
 <script src="{{ asset('../resources/assets/js/functions.js') }}"></script>
+<script src="{{ asset('../resources/assets/js/courses.js') }}"></script>
 <script src="{{ asset('../resources/assets/js/bootstrap-datepicker.min.js') }}"></script>
 <script>
 $("#li-courses").addClass("active");

@@ -66,10 +66,13 @@
 				</table>
 			</div>
 		</div>
+		<input type="hidden" name="select_id" id="select_id">
+		<input type="hidden" name="tipo_update" id="tipo_update">
 	</div>
 </div>
 @endsection
 @section('scripts')
+<script src="{{ asset('../resources/assets/js/functions.js') }}"></script>
 <script>
 	$("#li-courses").addClass("active");
 </script>
